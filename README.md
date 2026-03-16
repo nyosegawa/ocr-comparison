@@ -34,6 +34,31 @@ API ベースの商用モデルから OSS の GPU モデルまで 18 以上の O
 | [NDLOCR-Lite](https://github.com/ndl-lab/ndlocr-lite) | `ndlocr-lite` | CPU | CC-BY-4.0 |
 | [NDLOCR v2](https://github.com/ndl-lab/ndlocr_cli) | `ndlocr-v2` | A10G | CC-BY-4.0 |
 
+## 評価結果（日本語手書きメモ 6 枚）
+
+手書きメモ画像 6 枚に対する評価結果です（Hungarian NLS 降順）。詳細な分析と各モデルの出力例は[ブログ記事](https://nyosegawa.github.io/posts/japanese-handwriting-ocr-comparison/)を参照してください。
+
+| Rank | モデル | カテゴリ | NLS | BoC-F1 | CER | Avg Time |
+|------|--------|----------|-----|--------|-----|----------|
+| 1 | Gemini 3.1 Pro Preview | API | 0.924 | 0.929 | 0.205 | 67.9s |
+| 2 | Gemini 3 Flash Preview | API | 0.918 | 0.910 | 0.221 | 18.7s |
+| 3 | Gemini 3.1 Flash Lite Preview | API | 0.899 | 0.917 | 0.207 | 13.7s |
+| 4 | Claude 4.6 Opus | API | 0.897 | 0.896 | 0.225 | 74.9s |
+| 5 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
+| 6 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
+| 7 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
+| 8 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
+| 9 | olmOCR-2 | Modal | 0.723 | 0.786 | 0.370 | 45.4s |
+| 10 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
+| 11 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
+| 12 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
+| 13 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
+| 14 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
+| 15 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
+| 16 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
+| 17 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
+| 18 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
+
 ## 評価指標
 
 3 つの相補的な指標でモデルを評価します。
