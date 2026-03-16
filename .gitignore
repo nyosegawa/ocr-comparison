@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build output
+dist/
+
+# Environment / secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# uv
+.python-version
+
+# Vite
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Annotation data (ground truth, local only)
+annotation/data/
+
+# Uploaded images (large binary, local only)
+annotation/uploads/
+
+# Evaluation results (regenerable, may contain large predictions)
+evaluation/results/
+
+# Modal
+.modal/
+
+# Claude Code
+.claude/
+
+# External reference documents
+reference_docs/
