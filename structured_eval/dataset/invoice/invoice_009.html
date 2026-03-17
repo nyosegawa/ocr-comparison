@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 IT-2026-0317-009</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #111;
+    background: #fff;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 36px 44px;
+    background: #fff;
+  }
+  /* MONOCHROME + LEFT + SOLID + BORDERED (technical) */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .vendor-block-top .vendor-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3px;
+  }
+  .vendor-block-top .vendor-sub { font-size: 10px; color: #555; line-height: 1.6; }
+  .title-block { text-align: right; }
+  .doc-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 3px;
+    border: 2px solid #111;
+    padding: 4px 16px;
+    display: inline-block;
+  }
+  .client-meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+  .client-area { flex: 1; padding-right: 24px; }
+  .client-label-bar {
+    background: #111;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 3px 8px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .client-name { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .client-addr { font-size: 10px; color: #555; }
+  .meta-table-area table { border-collapse: collapse; min-width: 220px; }
+  .meta-table-area td {
+    border: 1px solid #111;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+  .meta-table-area td:first-child {
+    background: #111;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .section-bar {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+  }
+  /* BORDERED TABLE */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  table.items th {
+    background: #555;
+    color: #fff;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #333;
+  }
+  table.items td {
+    padding: 5px 8px;
+    font-size: 10px;
+    border: 1px solid #888;
+    vertical-align: middle;
+    color: #111;
+  }
+  table.items td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.items td.center { text-align: center; }
+  table.items tbody tr:nth-child(even) { background: #f5f5f5; }
+  .totals-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+  }
+  table.totals {
+    border-collapse: collapse;
+    min-width: 270px;
+  }
+  table.totals td {
+    padding: 5px 10px;
+    font-size: 11px;
+    border: 1px solid #888;
+  }
+  table.totals td:first-child { background: #eee; font-weight: 700; color: #333; }
+  table.totals td:last-child { text-align: right; }
+  table.totals tr.grand-row td {
+    background: #111;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid #111;
+  }
+  .lower-area {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .info-box {
+    flex: 1;
+    border: 1px solid #888;
+    padding: 8px 12px;
+  }
+  .box-head {
+    background: #333;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 3px 8px;
+    margin: -8px -12px 8px;
+  }
+  .box-text { font-size: 10px; color: #333; line-height: 1.8; }
+  .notes-bar {
+    border: 1px solid #888;
+    padding: 8px 12px;
+    font-size: 10px;
+    color: #444;
+    line-height: 1.7;
+  }
+  .notes-bar strong { color: #111; }
+  .page-footer {
+    border-top: 2px solid #111;
+    margin-top: 16px;
+    padding-top: 6px;
+    text-align: left;
+    font-size: 9px;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <div class="vendor-block-top">
+      <div class="vendor-name">株式会社四国テックラボ</div>
+      <div class="vendor-sub">
+        香川県高松市番町一丁目8番15号 高松センタービル7階<br>
+        TEL: 087-822-3456
+      </div>
+    </div>
+    <div class="title-block">
+      <div class="doc-title">請　求　書</div>
+    </div>
+  </div>
+
+  <div class="client-meta-row">
+    <div class="client-area">
+      <div class="client-label-bar">請求先</div>
+      <div class="client-name">愛媛データシステム株式会社　御中</div>
+      <div class="client-addr">愛媛県松山市一番町四丁目4番2号</div>
+    </div>
+    <div class="meta-table-area">
+      <table>
+        <tr><td>請求書番号</td><td>IT-2026-0317-009</td></tr>
+        <tr><td>発行日</td><td>2026年3月17日</td></tr>
+        <tr><td>お支払期限</td><td>2026年4月30日</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-bar">御請求明細</div>
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:28px">No</th>
+        <th>品目</th>
+        <th style="width:50px">数量</th>
+        <th style="width:50px">単位</th>
+        <th style="width:85px">単価</th>
+        <th style="width:95px">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td>業務システム開発（受発注管理モジュール）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥350,000</td>
+        <td class="num">¥350,000</td>
+      </tr>
+      <tr>
+        <td class="center">2</td>
+        <td>クラウドインフラ構築（AWS環境設計・構築）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥180,000</td>
+        <td class="num">¥180,000</td>
+      </tr>
+      <tr>
+        <td class="center">3</td>
+        <td>クラウド利用料（3月分・EC2・RDS含む）</td>
+        <td class="num">1</td>
+        <td class="center">ヶ月</td>
+        <td class="num">¥42,000</td>
+        <td class="num">¥42,000</td>
+      </tr>
+      <tr>
+        <td class="center">4</td>
+        <td>セキュリティ監査・レポート作成</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥95,000</td>
+        <td class="num">¥95,000</td>
+      </tr>
+      <tr>
+        <td class="center">5</td>
+        <td>システム保守運用（月次）</td>
+        <td class="num">1</td>
+        <td class="center">ヶ月</td>
+        <td class="num">¥60,000</td>
+        <td class="num">¥60,000</td>
+      </tr>
+      <tr>
+        <td class="center">6</td>
+        <td>技術研修・オンボーディング支援</td>
+        <td class="num">8</td>
+        <td class="center">時間</td>
+        <td class="num">¥12,000</td>
+        <td class="num">¥96,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-section">
+    <table class="totals">
+      <tr><td>小計</td><td>¥823,000</td></tr>
+      <tr><td>消費税（10%）</td><td>¥82,300</td></tr>
+      <tr class="grand-row"><td>合計金額</td><td>¥905,300</td></tr>
+    </table>
+  </div>
+
+  <div class="lower-area">
+    <div class="info-box">
+      <div class="box-head">振込先口座</div>
+      <div class="box-text">
+        百十四銀行　高松本町支店<br>
+        普通　7890123<br>
+        カ）シコクテックラボ
+      </div>
+    </div>
+    <div class="info-box">
+      <div class="box-head">登録番号</div>
+      <div class="box-text">T3700276543210</div>
+    </div>
+  </div>
+
+  <div class="notes-bar">
+    <strong>備考：</strong>各作業の詳細は別途作業報告書をご参照ください。次月以降の保守契約については担当者よりご連絡いたします。
+  </div>
+
+  <div class="page-footer">株式会社四国テックラボ — 登録番号 T3700276543210</div>
+</div>
+</body>
+</html>

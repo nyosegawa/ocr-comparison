@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BusinessCard",
+  "description": "日本語名刺のスキーマ定義",
+  "type": "object",
+  "required": ["id", "type", "metadata", "ground_truth"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "ドキュメントID",
+      "pattern": "^business_card_\\d{3}$"
+    },
+    "type": {
+      "type": "string",
+      "const": "business_card",
+      "description": "ドキュメント種別"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["industry", "region", "scale", "layout_style", "color_scheme", "border_style", "header_alignment"],
+      "properties": {
+        "industry": {
+          "type": "string",
+          "enum": ["不動産", "教育", "小売", "医療", "IT"],
+          "description": "業種"
+        },
+        "region": {
+          "type": "string",
+          "enum": ["東北", "四国", "九州"],
+          "description": "地域"
+        },
+        "scale": {
+          "type": "string",
+          "enum": ["minimal", "standard", "full"],
+          "description": "情報密度: minimal=名前+会社+電話のみ / standard=部署・役職・メール含む / full=FAX・サイト・英語名等含む"
+        },
+        "layout_style": {
+          "type": "string",
+          "description": "レイアウトスタイルの説明ラベル"
+        },
+        "color_scheme": {
+          "type": "string",
+          "enum": ["monochrome", "blue", "gray", "green", "warm"],
+          "description": "カラースキーム"
+        },
+        "border_style": {
+          "type": "string",
+          "enum": ["solid", "dashed", "none", "double", "thin"],
+          "description": "枠線スタイル"
+        },
+        "header_alignment": {
+          "type": "string",
+          "enum": ["left", "center", "right", "split"],
+          "description": "ヘッダー配置"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ground_truth": {
+      "type": "object",
+      "required": ["person_name"],
+      "properties": {
+        "person_name": {
+          "type": "string",
+          "description": "氏名"
+        },
+        "person_name_reading": {
+          "type": ["string", "null"],
+          "description": "氏名の読み（ひらがな・カタカナ）"
+        },
+        "company_name": {
+          "type": ["string", "null"],
+          "description": "会社名"
+        },
+        "company_name_en": {
+          "type": ["string", "null"],
+          "description": "会社名（英語）"
+        },
+        "department": {
+          "type": ["string", "null"],
+          "description": "部署名"
+        },
+        "title": {
+          "type": ["string", "null"],
+          "description": "役職"
+        },
+        "address": {
+          "type": ["string", "null"],
+          "description": "住所"
+        },
+        "postal_code": {
+          "type": ["string", "null"],
+          "description": "郵便番号"
+        },
+        "phone": {
+          "type": ["string", "null"],
+          "description": "電話番号"
+        },
+        "fax": {
+          "type": ["string", "null"],
+          "description": "FAX番号"
+        },
+        "mobile": {
+          "type": ["string", "null"],
+          "description": "携帯電話番号"
+        },
+        "email": {
+          "type": ["string", "null"],
+          "description": "メールアドレス",
+          "format": "email"
+        },
+        "website": {
+          "type": ["string", "null"],
+          "description": "WebサイトURL",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 EDU-2026-0317-008</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #3d2a1a;
+    background: #fffaf5;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 48px 56px;
+    background: #fffaf5;
+  }
+  /* WARM + CENTER + DASHED + COMPACT */
+  .warm-border-top {
+    border-top: 3px dashed #c17f3a;
+    margin-bottom: 24px;
+    padding-top: 16px;
+  }
+  .doc-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8b4513;
+    text-align: center;
+    letter-spacing: 8px;
+    margin-bottom: 4px;
+  }
+  .doc-tagline {
+    text-align: center;
+    font-size: 10px;
+    color: #c17f3a;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+  .invoice-card {
+    background: #fff8ee;
+    border: 1px dashed #c17f3a;
+    border-radius: 6px;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .invoice-card .inv-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: #8b4513;
+    margin-bottom: 8px;
+  }
+  .date-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 11px;
+    color: #6b3a1f;
+  }
+  .date-row .dl { color: #c17f3a; font-size: 10px; }
+  .client-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #e8b97a;
+  }
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5c2e00;
+    margin-bottom: 4px;
+  }
+  .client-address { font-size: 10px; color: #8b6040; }
+  .vendor-section {
+    background: #fff3e0;
+    border: 1px dashed #d4a060;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .vendor-name { font-size: 13px; font-weight: 700; color: #5c2e00; margin-bottom: 4px; }
+  .vendor-detail { font-size: 10px; color: #7a4a20; line-height: 1.7; }
+  .items-header {
+    background: #8b4513;
+    color: #fff8ee;
+    text-align: center;
+    padding: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 0;
+  }
+  /* COMPACT TABLE */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  table.items th {
+    background: #f5e6d0;
+    color: #5c2e00;
+    padding: 5px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px dashed #d4a060;
+  }
+  table.items td {
+    padding: 5px 7px;
+    font-size: 11px;
+    border: 1px dashed #e0c090;
+    vertical-align: middle;
+    color: #3d2a1a;
+  }
+  table.items td.num { text-align: right; }
+  table.items td.center { text-align: center; }
+  table.items tbody tr:nth-child(even) { background: #fff8ee; }
+  .totals-center {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+  }
+  .totals-box {
+    background: #fff3e0;
+    border: 1px dashed #c17f3a;
+    border-radius: 4px;
+    padding: 12px 24px;
+    min-width: 280px;
+  }
+  .t-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 11px;
+    color: #6b3a1f;
+    border-bottom: 1px dashed #e8b97a;
+  }
+  .t-row.grand {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5c2e00;
+    border-top: 2px dashed #8b4513;
+    border-bottom: none;
+    padding-top: 8px;
+    margin-top: 4px;
+  }
+  .bottom-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+    justify-content: center;
+  }
+  .info-card {
+    flex: 1;
+    background: #fff8ee;
+    border: 1px dashed #d4a060;
+    border-radius: 4px;
+    padding: 10px 14px;
+    text-align: center;
+  }
+  .info-card .card-title {
+    font-size: 9px;
+    color: #c17f3a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .info-card .card-content { font-size: 10px; color: #5c2e00; line-height: 1.8; }
+  .notes-area {
+    background: #fff8ee;
+    border: 1px dashed #d4a060;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 10px;
+    color: #6b3a1f;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .warm-border-bottom {
+    border-bottom: 3px dashed #c17f3a;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="warm-border-top">
+    <div class="doc-title">請　求　書</div>
+    <div class="doc-tagline">INVOICE</div>
+  </div>
+
+  <div class="invoice-card">
+    <div class="inv-num">No. EDU-2026-0317-008</div>
+    <div class="date-row">
+      <div><div class="dl">発行日</div>2026/03/17</div>
+      <div><div class="dl">お支払期限</div>2026/04/10</div>
+    </div>
+  </div>
+
+  <div class="client-section">
+    <div class="client-name">学校法人博多学園　御中</div>
+    <div class="client-address">福岡県福岡市中央区天神一丁目15番5号</div>
+  </div>
+
+  <div class="vendor-section">
+    <div class="vendor-name">有限会社九州エデュケーションサポート</div>
+    <div class="vendor-detail">
+      福岡県福岡市博多区博多駅前三丁目2番1号 博多センタービル5階　TEL: 092-473-5678
+    </div>
+  </div>
+
+  <div class="items-header">御請求明細</div>
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:30px">No</th>
+        <th>品目</th>
+        <th style="width:55px">数量</th>
+        <th style="width:40px">単位</th>
+        <th style="width:80px">単価</th>
+        <th style="width:90px">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td>テキスト印刷・製本費用（春期コース用）</td>
+        <td class="num">50</td>
+        <td class="center">冊</td>
+        <td class="num">¥120</td>
+        <td class="num">¥6,000</td>
+      </tr>
+      <tr>
+        <td class="center">2</td>
+        <td>教材開発費（デジタルワークシート作成）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥2,500</td>
+        <td class="num">¥2,500</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-center">
+    <div class="totals-box">
+      <div class="t-row"><span>小計</span><span>¥8,500</span></div>
+      <div class="t-row"><span>消費税（10%）</span><span>¥850</span></div>
+      <div class="t-row grand"><span>合計金額</span><span>¥9,350</span></div>
+    </div>
+  </div>
+
+  <div class="bottom-grid">
+    <div class="info-card">
+      <div class="card-title">振込先口座</div>
+      <div class="card-content">
+        西日本シティ銀行　博多駅前支店<br>
+        普通　6789012<br>
+        ユ）キュウシュウエデュケーションサポート
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-title">登録番号</div>
+      <div class="card-content">T4000254321098</div>
+    </div>
+  </div>
+
+  <div class="notes-area">
+    <strong>備考：</strong>教材の内容に関するご要望・修正依頼はお気軽にご連絡ください。次回ご注文より割引サービスをご利用いただけます。
+  </div>
+
+  <div class="warm-border-bottom"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "id": "invoice_006",
+  "type": "invoice",
+  "metadata": {
+    "industry": "医療",
+    "region": "東北",
+    "scale": "large",
+    "line_items_count": 7,
+    "layout_style": "professional_blue",
+    "color_scheme": "blue",
+    "border_style": "solid",
+    "header_alignment": "split",
+    "table_style": "bordered",
+    "date_format": "2026年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "MED-2026-0317-006",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-30",
+    "vendor_name": "株式会社東北メディカルサプライ",
+    "vendor_address": "宮城県仙台市青葉区一番町三丁目6番1号 仙台トラストタワー12階",
+    "vendor_phone": "022-261-3456",
+    "vendor_registration_number": "T4300198765432",
+    "client_name": "医療法人社団みちのく会 仙台北クリニック",
+    "client_address": "宮城県仙台市宮城野区榴岡四丁目2番3号",
+    "line_items": [
+      {
+        "description": "超音波診断装置用プローブカバー",
+        "quantity": 100,
+        "unit": "枚",
+        "unit_price": 1200,
+        "amount": 120000
+      },
+      {
+        "description": "採血管セット（真空採血管各種）",
+        "quantity": 500,
+        "unit": "本",
+        "unit_price": 280,
+        "amount": 140000
+      },
+      {
+        "description": "検査試薬（血液生化学パネル）",
+        "quantity": 10,
+        "unit": "キット",
+        "unit_price": 18000,
+        "amount": 180000
+      },
+      {
+        "description": "手術用縫合糸セット",
+        "quantity": 50,
+        "unit": "箱",
+        "unit_price": 3500,
+        "amount": 175000
+      },
+      {
+        "description": "医療廃棄物処理費用（3月分）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 45000,
+        "amount": 45000
+      },
+      {
+        "description": "消毒液（次亜塩素酸ナトリウム溶液）",
+        "quantity": 20,
+        "unit": "L",
+        "unit_price": 2500,
+        "amount": 50000
+      },
+      {
+        "description": "医療機器定期点検サービス",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 120000,
+        "amount": 120000
+      }
+    ],
+    "subtotal": 830000,
+    "tax_rate": 0.10,
+    "tax_amount": 83000,
+    "total_amount": 913000,
+    "bank_name": "七十七銀行",
+    "bank_branch": "一番町支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "4567890",
+    "bank_account_holder": "カ）トウホクメディカルサプライ",
+    "notes": "医療機器・薬品に関するお問い合わせは担当営業までご連絡ください。お支払いは月末締め翌月末払いにて承ります。"
+  }
+}

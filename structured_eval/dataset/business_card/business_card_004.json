@@ -1,0 +1,28 @@
+{
+  "id": "business_card_004",
+  "type": "business_card",
+  "metadata": {
+    "industry": "IT",
+    "region": "東北",
+    "scale": "standard",
+    "layout_style": "cool_gray",
+    "color_scheme": "gray",
+    "border_style": "solid",
+    "header_alignment": "left"
+  },
+  "ground_truth": {
+    "person_name": "高橋 誠",
+    "person_name_reading": "たかはし まこと",
+    "company_name": "株式会社東北データシステムズ",
+    "company_name_en": null,
+    "department": "インフラ基盤部",
+    "title": "チームリーダー",
+    "address": "宮城県仙台市宮城野区榴岡4丁目1-5 NBSビル6F",
+    "postal_code": "983-0852",
+    "phone": "022-385-9140",
+    "fax": null,
+    "mobile": null,
+    "email": "makoto.takahashi@tohoku-datasys.co.jp",
+    "website": null
+  }
+}

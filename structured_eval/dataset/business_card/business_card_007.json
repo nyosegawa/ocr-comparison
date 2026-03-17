@@ -1,0 +1,28 @@
+{
+  "id": "business_card_007",
+  "type": "business_card",
+  "metadata": {
+    "industry": "教育",
+    "region": "四国",
+    "scale": "standard",
+    "layout_style": "academic_blue",
+    "color_scheme": "blue",
+    "border_style": "thin",
+    "header_alignment": "right"
+  },
+  "ground_truth": {
+    "person_name": "松本 浩二",
+    "person_name_reading": "まつもと こうじ",
+    "company_name": "学校法人徳島学園 徳島総合大学",
+    "company_name_en": null,
+    "department": "工学部情報工学科",
+    "title": "准教授",
+    "address": "徳島県徳島市南常三島町2丁目1 工学部棟315号室",
+    "postal_code": "770-8506",
+    "phone": "088-656-7412",
+    "fax": null,
+    "mobile": null,
+    "email": "koji.matsumoto@tokushima-sogo-u.ac.jp",
+    "website": null
+  }
+}

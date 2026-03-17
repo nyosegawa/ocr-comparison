@@ -1,0 +1,28 @@
+{
+  "id": "business_card_010",
+  "type": "business_card",
+  "metadata": {
+    "industry": "医療",
+    "region": "九州",
+    "scale": "minimal",
+    "layout_style": "minimal_gray",
+    "color_scheme": "gray",
+    "border_style": "thin",
+    "header_alignment": "right"
+  },
+  "ground_truth": {
+    "person_name": "西田 和夫",
+    "person_name_reading": "にしだ かずお",
+    "company_name": "医療法人清和会 西田内科クリニック",
+    "company_name_en": null,
+    "department": null,
+    "title": "院長・理事長",
+    "address": null,
+    "postal_code": null,
+    "phone": "095-842-7760",
+    "fax": null,
+    "mobile": null,
+    "email": null,
+    "website": null
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #ffffff;
+    display: flex;
+  }
+  .left-bar {
+    width: 8px;
+    height: 210px;
+    background: #1a3a6b;
+    flex-shrink: 0;
+  }
+  .content {
+    flex: 1;
+    padding: 12px 12px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header {
+    border-bottom: 1.5px solid #1a3a6b;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+  .company-name {
+    font-size: 10px;
+    font-weight: 700;
+    color: #1a3a6b;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+  .dept-title {
+    font-size: 8px;
+    color: #4a5a7a;
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+  }
+  .name-block {
+    margin: 4px 0;
+  }
+  .name-reading {
+    font-size: 7.5px;
+    color: #7a8a9a;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    margin-bottom: 1px;
+  }
+  .person-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a3a6b;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+  .contact-section {
+    border-top: 1px solid #d0d8e8;
+    padding-top: 6px;
+  }
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5px;
+  }
+  .contact-label {
+    font-size: 7px;
+    color: #1a3a6b;
+    font-weight: 700;
+    min-width: 28px;
+    padding-top: 0.5px;
+    letter-spacing: 0.03em;
+  }
+  .contact-value {
+    font-size: 7.5px;
+    color: #333344;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+  .address-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="left-bar"></div>
+  <div class="content">
+    <div class="header">
+      <div class="company-name">株式会社みちのく不動産</div>
+      <div class="dept-title">営業部　主任</div>
+    </div>
+    <div class="name-block">
+      <div class="name-reading">ささき ゆういち</div>
+      <div class="person-name">佐々木 雄一</div>
+    </div>
+    <div class="contact-section">
+      <div class="contact-row">
+        <span class="contact-label">住所</span>
+        <span class="contact-value">〒980-0811 宮城県仙台市青葉区一番町2丁目4-8<br>みちのくビル3F</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">TEL</span>
+        <span class="contact-value">022-264-7391</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">E-mail</span>
+        <span class="contact-value">yuichi.sasaki@michinoku-fudosan.co.jp</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

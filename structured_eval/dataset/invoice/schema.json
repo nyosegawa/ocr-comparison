@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Invoice",
+  "description": "日本語請求書の構造化データスキーマ",
+  "type": "object",
+  "required": ["id", "type", "metadata", "ground_truth"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "ドキュメントID"
+    },
+    "type": {
+      "type": "string",
+      "const": "invoice"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["industry", "region", "scale", "line_items_count", "layout_style"],
+      "properties": {
+        "industry": {
+          "type": "string",
+          "enum": ["IT", "製造", "飲食", "建設", "小売", "医療", "不動産", "教育"]
+        },
+        "region": {
+          "type": "string",
+          "description": "請求元の都道府県・地方"
+        },
+        "scale": {
+          "type": "string",
+          "enum": ["small", "medium", "large"],
+          "description": "small: 1-2行・¥10,000未満 / medium: 3-5行・¥10,000-¥500,000 / large: 6行以上・¥500,000超"
+        },
+        "line_items_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "layout_style": {
+          "type": "string",
+          "description": "レイアウトスタイルの識別子"
+        },
+        "color_scheme": {
+          "type": "string",
+          "enum": ["monochrome", "blue", "gray", "green", "warm"]
+        },
+        "border_style": {
+          "type": "string",
+          "enum": ["solid", "dashed", "none", "double", "thin"]
+        },
+        "header_alignment": {
+          "type": "string",
+          "enum": ["left", "center", "right", "split"]
+        },
+        "table_style": {
+          "type": "string",
+          "enum": ["bordered", "striped", "minimal", "compact"]
+        },
+        "date_format": {
+          "type": "string",
+          "description": "請求書に表示される日付フォーマット例"
+        }
+      }
+    },
+    "ground_truth": {
+      "type": "object",
+      "required": ["vendor_name", "total_amount", "line_items"],
+      "properties": {
+        "invoice_number": {
+          "type": ["string", "null"],
+          "description": "請求書番号"
+        },
+        "issue_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "発行日 (YYYY-MM-DD)"
+        },
+        "due_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "支払期限 (YYYY-MM-DD)"
+        },
+        "vendor_name": {
+          "type": "string",
+          "description": "請求元の会社名"
+        },
+        "vendor_address": {
+          "type": ["string", "null"],
+          "description": "請求元の住所"
+        },
+        "vendor_phone": {
+          "type": ["string", "null"],
+          "description": "請求元の電話番号"
+        },
+        "vendor_registration_number": {
+          "type": ["string", "null"],
+          "pattern": "^T[0-9]{13}$",
+          "description": "インボイス登録番号 (T+13桁)"
+        },
+        "client_name": {
+          "type": ["string", "null"],
+          "description": "請求先の会社名"
+        },
+        "client_address": {
+          "type": ["string", "null"],
+          "description": "請求先の住所"
+        },
+        "line_items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["description", "amount"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "品目名"
+              },
+              "quantity": {
+                "type": ["number", "null"],
+                "description": "数量"
+              },
+              "unit": {
+                "type": ["string", "null"],
+                "description": "単位"
+              },
+              "unit_price": {
+                "type": ["number", "null"],
+                "description": "単価"
+              },
+              "amount": {
+                "type": "number",
+                "description": "金額"
+              }
+            }
+          }
+        },
+        "subtotal": {
+          "type": ["number", "null"],
+          "description": "小計（税抜）"
+        },
+        "tax_rate": {
+          "type": ["number", "null"],
+          "description": "消費税率 (例: 0.10)"
+        },
+        "tax_amount": {
+          "type": ["number", "null"],
+          "description": "消費税額"
+        },
+        "total_amount": {
+          "type": "number",
+          "description": "合計金額（税込）"
+        },
+        "bank_name": {
+          "type": ["string", "null"],
+          "description": "振込先銀行名"
+        },
+        "bank_branch": {
+          "type": ["string", "null"],
+          "description": "振込先支店名"
+        },
+        "bank_account_type": {
+          "type": ["string", "null"],
+          "description": "口座種別"
+        },
+        "bank_account_number": {
+          "type": ["string", "null"],
+          "description": "口座番号"
+        },
+        "bank_account_holder": {
+          "type": ["string", "null"],
+          "description": "口座名義"
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "description": "備考"
+        }
+      }
+    }
+  }
+}

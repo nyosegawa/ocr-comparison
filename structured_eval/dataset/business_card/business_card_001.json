@@ -1,0 +1,28 @@
+{
+  "id": "business_card_001",
+  "type": "business_card",
+  "metadata": {
+    "industry": "不動産",
+    "region": "東北",
+    "scale": "standard",
+    "layout_style": "corporate_blue",
+    "color_scheme": "blue",
+    "border_style": "none",
+    "header_alignment": "left"
+  },
+  "ground_truth": {
+    "person_name": "佐々木 雄一",
+    "person_name_reading": "ささき ゆういち",
+    "company_name": "株式会社みちのく不動産",
+    "company_name_en": null,
+    "department": "営業部",
+    "title": "主任",
+    "address": "宮城県仙台市青葉区一番町2丁目4-8 みちのくビル3F",
+    "postal_code": "980-0811",
+    "phone": "022-264-7391",
+    "fax": null,
+    "mobile": null,
+    "email": "yuichi.sasaki@michinoku-fudosan.co.jp",
+    "website": null
+  }
+}

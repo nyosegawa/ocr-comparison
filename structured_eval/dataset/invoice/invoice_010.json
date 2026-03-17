@@ -1,0 +1,67 @@
+{
+  "id": "invoice_010",
+  "type": "invoice",
+  "metadata": {
+    "industry": "製造",
+    "region": "近畿",
+    "scale": "medium",
+    "line_items_count": 4,
+    "layout_style": "industrial_green",
+    "color_scheme": "green",
+    "border_style": "double",
+    "header_alignment": "split",
+    "table_style": "striped",
+    "date_format": "令和8年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "MFG-R8-0317-010",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-25",
+    "vendor_name": "株式会社関西精密工業",
+    "vendor_address": "大阪府東大阪市高井田元町二丁目10番5号",
+    "vendor_phone": "06-6782-9012",
+    "vendor_registration_number": "T2721087654309",
+    "client_name": "京都メカニクス株式会社",
+    "client_address": "京都府京都市伏見区竹田七瀬川町59番地",
+    "line_items": [
+      {
+        "description": "金型製作費（プレス型・試作含む）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 180000,
+        "amount": 180000
+      },
+      {
+        "description": "アルミ部品精密加工（旋盤・フライス）",
+        "quantity": 200,
+        "unit": "個",
+        "unit_price": 650,
+        "amount": 130000
+      },
+      {
+        "description": "品質検査・寸法測定レポート",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 35000,
+        "amount": 35000
+      },
+      {
+        "description": "梱包・配送費（大阪→京都）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 8000,
+        "amount": 8000
+      }
+    ],
+    "subtotal": 353000,
+    "tax_rate": 0.10,
+    "tax_amount": 35300,
+    "total_amount": 388300,
+    "bank_name": "関西みらい銀行",
+    "bank_branch": "高井田支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "8901234",
+    "bank_account_holder": "カ）カンサイセイミツコウギョウ",
+    "notes": "製品の仕様変更・追加工程が発生した場合は、別途お見積りを提出いたします。品質保証期間は納品後6ヶ月とします。"
+  }
+}

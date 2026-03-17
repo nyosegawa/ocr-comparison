@@ -1,0 +1,28 @@
+{
+  "id": "business_card_008",
+  "type": "business_card",
+  "metadata": {
+    "industry": "小売",
+    "region": "九州",
+    "scale": "full",
+    "layout_style": "vibrant_green",
+    "color_scheme": "green",
+    "border_style": "solid",
+    "header_alignment": "left"
+  },
+  "ground_truth": {
+    "person_name": "渡辺 美穂",
+    "person_name_reading": "わたなべ みほ",
+    "company_name": "株式会社九州リテールグループ",
+    "company_name_en": "Kyushu Retail Group Co., Ltd.",
+    "department": "マーケティング本部",
+    "title": "マネージャー",
+    "address": "熊本県熊本市中央区手取本町6丁目1 熊本センタービル5F",
+    "postal_code": "860-0807",
+    "phone": "096-352-4481",
+    "fax": "096-352-4482",
+    "mobile": "070-4127-8895",
+    "email": "miho.watanabe@kyushu-retail.co.jp",
+    "website": "https://www.kyushu-retail.co.jp"
+  }
+}

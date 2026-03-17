@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 MED-2026-0317-006</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #1a2740;
+    background: #fff;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 0;
+    background: #fff;
+  }
+  /* BLUE + SPLIT + SOLID + BORDERED */
+  .header-bar {
+    background: #0d2b5e;
+    padding: 22px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-left .vendor-name-large {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+  }
+  .header-left .vendor-addr {
+    font-size: 9px;
+    color: #90b4e8;
+    line-height: 1.6;
+  }
+  .header-right .doc-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    text-align: right;
+  }
+  .header-right .doc-no {
+    font-size: 10px;
+    color: #90b4e8;
+    text-align: right;
+    margin-top: 2px;
+  }
+  .sub-header {
+    background: #1a4a8a;
+    padding: 8px 40px;
+    display: flex;
+    gap: 32px;
+  }
+  .sub-header span {
+    font-size: 10px;
+    color: #c5d8f5;
+  }
+  .sub-header strong { color: #fff; }
+  .body-area { padding: 24px 40px; }
+  .client-section {
+    border: 1px solid #0d2b5e;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+  .client-label { font-size: 9px; color: #1a4a8a; letter-spacing: 2px; margin-bottom: 4px; }
+  .client-name { font-size: 17px; font-weight: 700; color: #0d2b5e; }
+  .client-address { font-size: 10px; color: #3a5a8a; margin-top: 2px; }
+  .section-heading {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #1a4a8a;
+    padding: 5px 10px;
+    margin: 14px 0 0;
+    letter-spacing: 2px;
+  }
+  /* BORDERED TABLE */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+  }
+  table.items th {
+    background: #e3ecf7;
+    color: #0d2b5e;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #0d2b5e;
+  }
+  table.items td {
+    padding: 5px 8px;
+    font-size: 10px;
+    border: 1px solid #6a8bbf;
+    vertical-align: middle;
+    color: #1a2740;
+  }
+  table.items td.num { text-align: right; }
+  table.items td.center { text-align: center; }
+  table.items tbody tr:nth-child(even) { background: #f0f5fc; }
+  .totals-area {
+    display: flex;
+    justify-content: flex-end;
+    margin: 14px 0;
+  }
+  table.totals {
+    border-collapse: collapse;
+    min-width: 280px;
+  }
+  table.totals td {
+    padding: 5px 12px;
+    font-size: 11px;
+    border: 1px solid #6a8bbf;
+  }
+  table.totals td:first-child { background: #e3ecf7; color: #0d2b5e; font-weight: 700; }
+  table.totals td:last-child { text-align: right; }
+  table.totals tr.grand td {
+    background: #0d2b5e;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid #0d2b5e;
+  }
+  .lower-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .bank-box {
+    flex: 1;
+    border: 1px solid #0d2b5e;
+    padding: 10px 14px;
+  }
+  .box-title {
+    font-size: 9px;
+    font-weight: 700;
+    color: #1a4a8a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c5d8f5;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  .box-content { font-size: 10px; color: #1a2740; line-height: 1.8; }
+  .notes-box {
+    border: 1px solid #6a8bbf;
+    padding: 8px 14px;
+    font-size: 10px;
+    color: #3a5a8a;
+    line-height: 1.7;
+    background: #f8fbff;
+  }
+  .footer-bar {
+    background: #0d2b5e;
+    height: 6px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header-bar">
+    <div class="header-left">
+      <div class="vendor-name-large">株式会社東北メディカルサプライ</div>
+      <div class="vendor-addr">
+        宮城県仙台市青葉区一番町三丁目6番1号 仙台トラストタワー12階<br>
+        TEL: 022-261-3456　登録番号: T4300198765432
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="doc-title">請　求　書</div>
+      <div class="doc-no">MED-2026-0317-006</div>
+    </div>
+  </div>
+  <div class="sub-header">
+    <span>発行日：<strong>2026年3月17日</strong></span>
+    <span>お支払期限：<strong>2026年4月30日</strong></span>
+  </div>
+
+  <div class="body-area">
+    <div class="client-section">
+      <div class="client-label">請求先</div>
+      <div class="client-name">医療法人社団みちのく会 仙台北クリニック　御中</div>
+      <div class="client-address">宮城県仙台市宮城野区榴岡四丁目2番3号</div>
+    </div>
+
+    <div class="section-heading">御請求明細</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:28px">No</th>
+          <th>品目</th>
+          <th style="width:50px">数量</th>
+          <th style="width:50px">単位</th>
+          <th style="width:80px">単価</th>
+          <th style="width:90px">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center">1</td>
+          <td>超音波診断装置用プローブカバー</td>
+          <td class="num">100</td>
+          <td class="center">枚</td>
+          <td class="num">¥1,200</td>
+          <td class="num">¥120,000</td>
+        </tr>
+        <tr>
+          <td class="center">2</td>
+          <td>採血管セット（真空採血管各種）</td>
+          <td class="num">500</td>
+          <td class="center">本</td>
+          <td class="num">¥280</td>
+          <td class="num">¥140,000</td>
+        </tr>
+        <tr>
+          <td class="center">3</td>
+          <td>検査試薬（血液生化学パネル）</td>
+          <td class="num">10</td>
+          <td class="center">キット</td>
+          <td class="num">¥18,000</td>
+          <td class="num">¥180,000</td>
+        </tr>
+        <tr>
+          <td class="center">4</td>
+          <td>手術用縫合糸セット</td>
+          <td class="num">50</td>
+          <td class="center">箱</td>
+          <td class="num">¥3,500</td>
+          <td class="num">¥175,000</td>
+        </tr>
+        <tr>
+          <td class="center">5</td>
+          <td>医療廃棄物処理費用（3月分）</td>
+          <td class="num">1</td>
+          <td class="center">式</td>
+          <td class="num">¥45,000</td>
+          <td class="num">¥45,000</td>
+        </tr>
+        <tr>
+          <td class="center">6</td>
+          <td>消毒液（次亜塩素酸ナトリウム溶液）</td>
+          <td class="num">20</td>
+          <td class="center">L</td>
+          <td class="num">¥2,500</td>
+          <td class="num">¥50,000</td>
+        </tr>
+        <tr>
+          <td class="center">7</td>
+          <td>医療機器定期点検サービス</td>
+          <td class="num">1</td>
+          <td class="center">式</td>
+          <td class="num">¥120,000</td>
+          <td class="num">¥120,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals-area">
+      <table class="totals">
+        <tr><td>小計</td><td>¥830,000</td></tr>
+        <tr><td>消費税（10%）</td><td>¥83,000</td></tr>
+        <tr class="grand"><td>合計金額</td><td>¥913,000</td></tr>
+      </table>
+    </div>
+
+    <div class="lower-grid">
+      <div class="bank-box">
+        <div class="box-title">振込先口座</div>
+        <div class="box-content">
+          七十七銀行　一番町支店<br>
+          普通　4567890<br>
+          カ）トウホクメディカルサプライ
+        </div>
+      </div>
+      <div class="bank-box">
+        <div class="box-title">登録番号</div>
+        <div class="box-content">T4300198765432</div>
+      </div>
+    </div>
+
+    <div class="notes-box">
+      <strong>備考：</strong>医療機器・薬品に関するお問い合わせは担当営業までご連絡ください。お支払いは月末締め翌月末払いにて承ります。
+    </div>
+  </div>
+
+  <div class="footer-bar"></div>
+</div>
+</body>
+</html>

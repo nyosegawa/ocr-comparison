@@ -1,0 +1,71 @@
+{
+  "id": "receipt_005",
+  "type": "receipt",
+  "metadata": {
+    "industry": "建設",
+    "region": "中国",
+    "scale": "large",
+    "line_items_count": 6,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "━",
+    "item_display": "inline_qty",
+    "total_emphasis": "inverted",
+    "date_format": "R8.03.17 09:15"
+  },
+  "ground_truth": {
+    "receipt_number": "KEN-20260317-0058",
+    "issue_date": "2026-03-17",
+    "store_name": "山陽建材センター 広島南店",
+    "store_address": "広島県広島市南区宇品海岸2丁目8-15",
+    "store_phone": "082-255-3410",
+    "store_registration_number": "T9183027465910",
+    "client_name": null,
+    "line_items": [
+      {
+        "description": "鉄筋D13×6m",
+        "quantity": 20,
+        "unit_price": 8500,
+        "amount": 170000
+      },
+      {
+        "description": "セメント25kg袋",
+        "quantity": 50,
+        "unit_price": 2200,
+        "amount": 110000
+      },
+      {
+        "description": "合板12mm 3×6尺",
+        "quantity": 100,
+        "unit_price": 1800,
+        "amount": 180000
+      },
+      {
+        "description": "防水シートロール",
+        "quantity": 30,
+        "unit_price": 3500,
+        "amount": 105000
+      },
+      {
+        "description": "足場パイプ4m",
+        "quantity": 40,
+        "unit_price": 2800,
+        "amount": 112000
+      },
+      {
+        "description": "安全ネット10m",
+        "quantity": 10,
+        "unit_price": 4500,
+        "amount": 45000
+      }
+    ],
+    "subtotal": 722000,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 722000,
+    "tax_amount_10": 72200,
+    "total_amount": 794200,
+    "payment_method": "銀行振込",
+    "notes": "現場配送 納品日：2026-03-20"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "receipt_004",
+  "type": "receipt",
+  "metadata": {
+    "industry": "IT",
+    "region": "近畿",
+    "scale": "medium",
+    "line_items_count": 4,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "*",
+    "item_display": "one_line",
+    "total_emphasis": "large_font",
+    "date_format": "2026/03/17 14:22"
+  },
+  "ground_truth": {
+    "receipt_number": "IT-20260317-0214",
+    "issue_date": "2026-03-17",
+    "store_name": "デジタルワークス 梅田店",
+    "store_address": "大阪府大阪市北区梅田1丁目11-4",
+    "store_phone": "06-6341-8820",
+    "store_registration_number": "T6047382910563",
+    "client_name": "上様",
+    "line_items": [
+      {
+        "description": "クラウドライセンス1年",
+        "quantity": 1,
+        "unit_price": 45000,
+        "amount": 45000
+      },
+      {
+        "description": "サポート契約(月額)",
+        "quantity": 1,
+        "unit_price": 12000,
+        "amount": 12000
+      },
+      {
+        "description": "セキュリティソフト",
+        "quantity": 2,
+        "unit_price": 8800,
+        "amount": 17600
+      },
+      {
+        "description": "USBハブ 7ポート",
+        "quantity": 1,
+        "unit_price": 3200,
+        "amount": 3200
+      }
+    ],
+    "subtotal": 77800,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 77800,
+    "tax_amount_10": 7780,
+    "total_amount": 85580,
+    "payment_method": "クレジット",
+    "notes": null
+  }
+}

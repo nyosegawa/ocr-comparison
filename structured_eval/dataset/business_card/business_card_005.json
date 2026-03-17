@@ -1,0 +1,28 @@
+{
+  "id": "business_card_005",
+  "type": "business_card",
+  "metadata": {
+    "industry": "不動産",
+    "region": "四国",
+    "scale": "full",
+    "layout_style": "warm_classic",
+    "color_scheme": "warm",
+    "border_style": "none",
+    "header_alignment": "split"
+  },
+  "ground_truth": {
+    "person_name": "中村 陽介",
+    "person_name_reading": "なかむら ようすけ",
+    "company_name": "株式会社四国ハウジング",
+    "company_name_en": "Shikoku Housing Co., Ltd.",
+    "department": "開発企画部",
+    "title": "部長",
+    "address": "香川県高松市丸の内1丁目3-2 高松センタービル10F",
+    "postal_code": "760-0033",
+    "phone": "087-822-5670",
+    "fax": "087-822-5671",
+    "mobile": "080-2241-3388",
+    "email": "yosuke.nakamura@shikoku-housing.co.jp",
+    "website": "https://www.shikoku-housing.co.jp"
+  }
+}

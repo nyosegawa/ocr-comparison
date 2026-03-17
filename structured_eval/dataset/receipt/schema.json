@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Receipt",
+  "description": "POS thermal printer receipt (領収書/レシート) schema",
+  "type": "object",
+  "required": ["id", "type", "metadata", "ground_truth"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Document identifier"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["receipt"],
+      "description": "Document type"
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "industry",
+        "region",
+        "scale",
+        "line_items_count",
+        "layout_style",
+        "paper_width",
+        "separator_char",
+        "item_display",
+        "total_emphasis",
+        "date_format"
+      ],
+      "properties": {
+        "industry": {
+          "type": "string",
+          "enum": ["飲食", "小売", "医療", "教育", "コンビニ"],
+          "description": "業種"
+        },
+        "region": {
+          "type": "string",
+          "enum": ["北海道", "関東", "四国"],
+          "description": "地域"
+        },
+        "scale": {
+          "type": "string",
+          "enum": ["small", "medium", "large"],
+          "description": "small: 1-2品目・1万円未満 / medium: 3-5品目・1万〜50万円 / large: 6品目以上・50万円超"
+        },
+        "line_items_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "品目数"
+        },
+        "layout_style": {
+          "type": "string",
+          "enum": ["pos_thermal"],
+          "description": "レイアウト種別（POSサーマルプリンタ）"
+        },
+        "paper_width": {
+          "type": "string",
+          "enum": ["58mm", "80mm"],
+          "description": "レシート用紙幅"
+        },
+        "separator_char": {
+          "type": "string",
+          "enum": ["━", "─", "＝", "*", "-"],
+          "description": "区切り線に使用する文字"
+        },
+        "item_display": {
+          "type": "string",
+          "enum": ["one_line", "two_line", "inline_qty"],
+          "description": "品目表示形式"
+        },
+        "total_emphasis": {
+          "type": "string",
+          "enum": ["large_font", "inverted", "double_line", "bold_spaced"],
+          "description": "合計金額の強調表示スタイル"
+        },
+        "date_format": {
+          "type": "string",
+          "description": "日時フォーマット例（2026/03/17 12:34 / 2026年03月17日 12時34分 / R8.03.17 12:34）"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ground_truth": {
+      "type": "object",
+      "required": ["store_name", "total_amount", "line_items"],
+      "properties": {
+        "receipt_number": {
+          "type": ["string", "null"],
+          "description": "領収書番号"
+        },
+        "issue_date": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "発行日 (YYYY-MM-DD)"
+        },
+        "store_name": {
+          "type": "string",
+          "description": "店舗名"
+        },
+        "store_address": {
+          "type": ["string", "null"],
+          "description": "店舗住所"
+        },
+        "store_phone": {
+          "type": ["string", "null"],
+          "description": "電話番号"
+        },
+        "store_registration_number": {
+          "type": ["string", "null"],
+          "pattern": "^T\\d{13}$",
+          "description": "インボイス登録番号 (T+13桁)"
+        },
+        "client_name": {
+          "type": ["string", "null"],
+          "description": "宛名（POSレシートでは通常 null または '上様'）"
+        },
+        "line_items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["description", "amount"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "品目名"
+              },
+              "quantity": {
+                "type": ["number", "null"],
+                "description": "数量"
+              },
+              "unit_price": {
+                "type": ["number", "null"],
+                "description": "単価"
+              },
+              "amount": {
+                "type": "number",
+                "description": "金額"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "subtotal": {
+          "type": ["number", "null"],
+          "description": "小計（税抜）"
+        },
+        "tax_rate_8": {
+          "type": ["number", "null"],
+          "description": "軽減税率(8%)対象額（税抜）"
+        },
+        "tax_amount_8": {
+          "type": ["number", "null"],
+          "description": "軽減税率(8%)消費税額"
+        },
+        "tax_rate_10": {
+          "type": ["number", "null"],
+          "description": "標準税率(10%)対象額（税抜）"
+        },
+        "tax_amount_10": {
+          "type": ["number", "null"],
+          "description": "標準税率(10%)消費税額"
+        },
+        "total_amount": {
+          "type": "number",
+          "description": "合計金額（税込）"
+        },
+        "payment_method": {
+          "type": ["string", "null"],
+          "description": "支払方法"
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "description": "備考"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

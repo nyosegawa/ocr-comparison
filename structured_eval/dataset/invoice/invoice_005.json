@@ -1,0 +1,53 @@
+{
+  "id": "invoice_005",
+  "type": "invoice",
+  "metadata": {
+    "industry": "小売",
+    "region": "中国",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "simple_green",
+    "color_scheme": "green",
+    "border_style": "thin",
+    "header_alignment": "center",
+    "table_style": "minimal",
+    "date_format": "令和8年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "R8-INV-0317-005",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-15",
+    "vendor_name": "株式会社山陽リテールサポート",
+    "vendor_address": "広島県広島市中区紙屋町一丁目2番3号 中央ビル2階",
+    "vendor_phone": "082-245-6789",
+    "vendor_registration_number": "T3400187654321",
+    "client_name": "おかやまセレクトショップ株式会社",
+    "client_address": "岡山県岡山市北区表町二丁目4番6号",
+    "line_items": [
+      {
+        "description": "商品仕入（雑貨・日用品）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 5200,
+        "amount": 5200
+      },
+      {
+        "description": "包装資材（紙袋・緩衝材）",
+        "quantity": 200,
+        "unit": "枚",
+        "unit_price": 18,
+        "amount": 3600
+      }
+    ],
+    "subtotal": 8800,
+    "tax_rate": 0.10,
+    "tax_amount": 880,
+    "total_amount": 9680,
+    "bank_name": "もみじ銀行",
+    "bank_branch": "紙屋町支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "3456789",
+    "bank_account_holder": "カ）サンヨウリテールサポート",
+    "notes": "振込手数料はお客様にてご負担いただきますようお願いいたします。"
+  }
+}

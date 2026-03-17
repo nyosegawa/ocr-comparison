@@ -1,0 +1,59 @@
+{
+  "id": "receipt_007",
+  "type": "receipt",
+  "metadata": {
+    "industry": "不動産",
+    "region": "九州",
+    "scale": "medium",
+    "line_items_count": 4,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "─",
+    "item_display": "one_line",
+    "total_emphasis": "bold_spaced",
+    "date_format": "2026/03/17 16:45"
+  },
+  "ground_truth": {
+    "receipt_number": "FD-20260317-0019",
+    "issue_date": "2026-03-17",
+    "store_name": "九州リアルティ 博多本店",
+    "store_address": "福岡県福岡市博多区博多駅前3丁目2-1",
+    "store_phone": "092-471-5560",
+    "store_registration_number": "T8361940275834",
+    "client_name": "上様",
+    "line_items": [
+      {
+        "description": "仲介手数料",
+        "quantity": 1,
+        "unit_price": 180000,
+        "amount": 180000
+      },
+      {
+        "description": "火災保険料",
+        "quantity": 1,
+        "unit_price": 38000,
+        "amount": 38000
+      },
+      {
+        "description": "鍵交換費",
+        "quantity": 1,
+        "unit_price": 22000,
+        "amount": 22000
+      },
+      {
+        "description": "室内抗菌コート",
+        "quantity": 1,
+        "unit_price": 15000,
+        "amount": 15000
+      }
+    ],
+    "subtotal": 255000,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 255000,
+    "tax_amount_10": 25500,
+    "total_amount": 280500,
+    "payment_method": "振込",
+    "notes": "物件：福岡市南区大橋2-14-8 202号室"
+  }
+}

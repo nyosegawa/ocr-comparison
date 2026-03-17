@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>receipt_010</title>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'M PLUS 1 Code', monospace;
+  font-size: 11px;
+  color: #000;
+  background: #fff;
+  padding: 6px 8px;
+  width: 220px;
+}
+.center { text-align: center; }
+.store-name {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.sep { letter-spacing: 0; white-space: nowrap; overflow: hidden; }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.item-name { flex: 1; }
+.price { white-space: nowrap; }
+.total-inverted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 4px;
+}
+.small { font-size: 10px; }
+.spacer { margin: 1px 0; }
+</style>
+</head>
+<body>
+<div class="store-name">ホームプラザ 札幌手稲店</div>
+<div class="spacer"></div>
+<div class="center small">北海道札幌市手稲区前田7条11丁目2-5</div>
+<div class="center small">TEL 011-692-3870</div>
+<div class="spacer"></div>
+<div class="sep">--------------------</div>
+<div class="small"> No.0001547</div>
+<div class="small"> 2026/03/17 11:20</div>
+<div class="sep">--------------------</div>
+<div class="spacer"></div>
+<div class="row">
+  <span class="item-name">電気ケトル1.2L</span>
+  <span class="price">¥4,980</span>
+</div>
+<div class="spacer"></div>
+<div class="row">
+  <span class="item-name">マグカップ2P</span>
+  <span class="price">¥2,400</span>
+</div>
+<div class="spacer"></div>
+<div class="row">
+  <span class="item-name">ミニ加湿器</span>
+  <span class="price">¥6,800</span>
+</div>
+<div class="spacer"></div>
+<div class="sep">--------------------</div>
+<div class="row">
+  <span>小計</span>
+  <span class="price">¥14,180</span>
+</div>
+<div class="small">(税10%対象 ¥14,180 税 ¥1,418)</div>
+<div class="sep">--------------------</div>
+<div class="total-inverted">
+  <span>合　計</span>
+  <span>¥15,598</span>
+</div>
+<div class="sep">--------------------</div>
+<div>お支払い: 電子マネー</div>
+<div class="sep">--------------------</div>
+<div class="small">登録番号: T1739204865037</div>
+</body>
+</html>

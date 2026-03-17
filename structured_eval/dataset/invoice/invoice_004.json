@@ -1,0 +1,67 @@
+{
+  "id": "invoice_004",
+  "type": "invoice",
+  "metadata": {
+    "industry": "飲食",
+    "region": "近畿",
+    "scale": "medium",
+    "line_items_count": 4,
+    "layout_style": "casual_monochrome",
+    "color_scheme": "monochrome",
+    "border_style": "dashed",
+    "header_alignment": "left",
+    "table_style": "compact",
+    "date_format": "2026/03/17"
+  },
+  "ground_truth": {
+    "invoice_number": "INV-2026-0317-04",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-20",
+    "vendor_name": "株式会社なにわフードサービス",
+    "vendor_address": "大阪府大阪市中央区道頓堀二丁目3番8号 なにわビル3階",
+    "vendor_phone": "06-6213-4567",
+    "vendor_registration_number": "T2721045678901",
+    "client_name": "有限会社心斎橋キッチン",
+    "client_address": "大阪府大阪市中央区心斎橋筋一丁目7番5号",
+    "line_items": [
+      {
+        "description": "食材仕入（野菜・果物類）",
+        "quantity": 30,
+        "unit": "kg",
+        "unit_price": 800,
+        "amount": 24000
+      },
+      {
+        "description": "食材仕入（精肉・鮮魚類）",
+        "quantity": 15,
+        "unit": "kg",
+        "unit_price": 2200,
+        "amount": 33000
+      },
+      {
+        "description": "調理器具消耗品一式",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 18500,
+        "amount": 18500
+      },
+      {
+        "description": "店舗清掃サービス（月次）",
+        "quantity": 4,
+        "unit": "回",
+        "unit_price": 9000,
+        "amount": 36000
+      }
+    ],
+    "subtotal": 111500,
+    "tax_rate": 0.10,
+    "tax_amount": 11150,
+    "total_amount": 122650,
+    "bank_name": "大阪シティ信用金庫",
+    "bank_branch": "道頓堀支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "2345678",
+    "bank_account_holder": "カ）ナニワフードサービス",
+    "notes": "お支払期限までにご指定口座へお振込みください。食材の品質に関するお問い合わせはお気軽にご連絡ください。"
+  }
+}

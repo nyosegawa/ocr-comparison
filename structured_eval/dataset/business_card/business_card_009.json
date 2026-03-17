@@ -1,0 +1,28 @@
+{
+  "id": "business_card_009",
+  "type": "business_card",
+  "metadata": {
+    "industry": "IT",
+    "region": "四国",
+    "scale": "standard",
+    "layout_style": "clean_mono_tech",
+    "color_scheme": "monochrome",
+    "border_style": "none",
+    "header_alignment": "center"
+  },
+  "ground_truth": {
+    "person_name": "小林 健太",
+    "person_name_reading": "こばやし けんた",
+    "company_name": "合同会社コードラボ四国",
+    "company_name_en": null,
+    "department": "プロダクト開発部",
+    "title": "フルスタックエンジニア",
+    "address": "愛媛県松山市大手町2丁目5-10 松山ITビル4F",
+    "postal_code": "790-0003",
+    "phone": "089-945-6203",
+    "fax": null,
+    "mobile": null,
+    "email": "kenta.kobayashi@codelab-shikoku.co.jp",
+    "website": null
+  }
+}

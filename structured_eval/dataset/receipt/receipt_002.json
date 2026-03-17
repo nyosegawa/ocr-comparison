@@ -1,0 +1,59 @@
+{
+  "id": "receipt_002",
+  "type": "receipt",
+  "metadata": {
+    "industry": "小売",
+    "region": "関東",
+    "scale": "medium",
+    "line_items_count": 4,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "─",
+    "item_display": "one_line",
+    "total_emphasis": "double_line",
+    "date_format": "2026年03月17日 12時34分"
+  },
+  "ground_truth": {
+    "receipt_number": "0000892",
+    "issue_date": "2026-03-17",
+    "store_name": "カジュアルショップ ウェーブ 大宮店",
+    "store_address": "埼玉県さいたま市大宮区桜木町2-12-5",
+    "store_phone": "048-641-7823",
+    "store_registration_number": "T5103947261804",
+    "client_name": "上様",
+    "line_items": [
+      {
+        "description": "Tシャツ 白/M",
+        "quantity": 2,
+        "unit_price": 2800,
+        "amount": 5600
+      },
+      {
+        "description": "デニムパンツ",
+        "quantity": 1,
+        "unit_price": 6500,
+        "amount": 6500
+      },
+      {
+        "description": "ソックス3P",
+        "quantity": 1,
+        "unit_price": 980,
+        "amount": 980
+      },
+      {
+        "description": "ベルト 黒",
+        "quantity": 1,
+        "unit_price": 2200,
+        "amount": 2200
+      }
+    ],
+    "subtotal": 15280,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 15280,
+    "tax_amount_10": 1528,
+    "total_amount": 16808,
+    "payment_method": "クレジット",
+    "notes": "返品・交換は30日以内にレシートをご持参ください"
+  }
+}

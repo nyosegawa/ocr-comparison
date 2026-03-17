@@ -1,0 +1,77 @@
+{
+  "id": "receipt_003",
+  "type": "receipt",
+  "metadata": {
+    "industry": "医療",
+    "region": "四国",
+    "scale": "large",
+    "line_items_count": 7,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "＝",
+    "item_display": "inline_qty",
+    "total_emphasis": "bold_spaced",
+    "date_format": "R8.03.17 12:34"
+  },
+  "ground_truth": {
+    "receipt_number": "MED-2026-03172",
+    "issue_date": "2026-03-17",
+    "store_name": "四国メディカル供給センター",
+    "store_address": "愛媛県松山市湊町4丁目2-18",
+    "store_phone": "089-934-6120",
+    "store_registration_number": "T7294015836492",
+    "client_name": "上様",
+    "line_items": [
+      {
+        "description": "血圧計(上腕式)",
+        "quantity": 12,
+        "unit_price": 12800,
+        "amount": 153600
+      },
+      {
+        "description": "パルスオキシメータ",
+        "quantity": 5,
+        "unit_price": 8500,
+        "amount": 42500
+      },
+      {
+        "description": "体温計(非接触)",
+        "quantity": 20,
+        "unit_price": 3200,
+        "amount": 64000
+      },
+      {
+        "description": "手術用手袋S 100枚",
+        "quantity": 15,
+        "unit_price": 2400,
+        "amount": 36000
+      },
+      {
+        "description": "処置用シーツ 50枚",
+        "quantity": 30,
+        "unit_price": 1800,
+        "amount": 54000
+      },
+      {
+        "description": "注射器セット 50本",
+        "quantity": 20,
+        "unit_price": 3600,
+        "amount": 72000
+      },
+      {
+        "description": "消毒アルコール5L",
+        "quantity": 12,
+        "unit_price": 4200,
+        "amount": 50400
+      }
+    ],
+    "subtotal": 472500,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 472500,
+    "tax_amount_10": 47250,
+    "total_amount": 519750,
+    "payment_method": "銀行振込",
+    "notes": "納品書No.D-20260317-089と照合のこと"
+  }
+}

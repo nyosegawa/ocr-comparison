@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f0f4fa;
+    border: 1px solid #b0c4de;
+  }
+  .right-accent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 210px;
+    background: #1a4a8a;
+  }
+  .card-inner {
+    width: 340px;
+    height: 210px;
+    padding: 12px 16px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .univ-name {
+    font-size: 9px;
+    font-weight: 700;
+    color: #1a4a8a;
+    letter-spacing: 0.05em;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .dept-block {
+    text-align: right;
+    margin-top: 2px;
+  }
+  .dept {
+    font-size: 7.5px;
+    color: #4a6a9a;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  .acad-title {
+    font-size: 8px;
+    color: #1a4a8a;
+    font-weight: 700;
+    margin-top: 1px;
+    letter-spacing: 0.04em;
+  }
+  .mid-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0;
+  }
+  .name-block {
+    text-align: right;
+  }
+  .name-reading {
+    font-size: 7.5px;
+    color: #7a9aca;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    margin-bottom: 2px;
+  }
+  .person-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d2a5e;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+  }
+  .bottom-section {
+    border-top: 1px solid #b0c4de;
+    padding-top: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+  }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .label {
+    font-size: 7px;
+    color: #1a4a8a;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .value {
+    font-size: 7.5px;
+    color: #2a3a5a;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .value.small {
+    font-size: 6.5px;
+  }
+  .address-right {
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="right-accent"></div>
+  <div class="card-inner">
+    <div class="top-section">
+      <div class="univ-name">学校法人徳島学園<br>徳島総合大学</div>
+      <div class="dept-block">
+        <div class="dept">工学部情報工学科</div>
+        <div class="acad-title">准教授</div>
+      </div>
+    </div>
+    <div class="mid-section">
+      <div class="name-block">
+        <div class="name-reading">まつもと こうじ</div>
+        <div class="person-name">松本 浩二</div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="contact-row">
+        <span class="label">住所</span>
+        <span class="value small address-right">〒770-8506 徳島県徳島市南常三島町2丁目1 工学部棟315号室</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">TEL</span>
+        <span class="value">088-656-7412</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">Mail</span>
+        <span class="value small">koji.matsumoto@tokushima-sogo-u.ac.jp</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f4f4f4;
+    border: 2px solid #888888;
+  }
+  .header-bar {
+    background: #555555;
+    padding: 8px 14px 7px;
+    border-bottom: 2px solid #888888;
+  }
+  .company-name {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+  .dept-title {
+    font-size: 8px;
+    color: #cccccc;
+    font-weight: 300;
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  .main {
+    display: flex;
+    height: 152px;
+  }
+  .name-col {
+    width: 148px;
+    padding: 12px 12px 10px 14px;
+    border-right: 2px solid #999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name-reading {
+    font-size: 7.5px;
+    color: #888888;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    margin-bottom: 3px;
+  }
+  .person-name {
+    font-size: 23px;
+    font-weight: 700;
+    color: #2a2a2a;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+  .title-badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 7px;
+    background: #888888;
+    color: #ffffff;
+    font-size: 7.5px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+  }
+  .contact-col {
+    flex: 1;
+    padding: 10px 12px 8px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .label {
+    font-size: 7px;
+    color: #555555;
+    font-weight: 700;
+    min-width: 26px;
+    padding-top: 0.5px;
+    letter-spacing: 0.02em;
+  }
+  .value {
+    font-size: 7.5px;
+    color: #333333;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.45;
+  }
+  .value.small {
+    font-size: 7px;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="company-name">株式会社東北データシステムズ</div>
+    <div class="dept-title">インフラ基盤部　チームリーダー</div>
+  </div>
+  <div class="main">
+    <div class="name-col">
+      <div class="name-reading">たかはし まこと</div>
+      <div class="person-name">高橋 誠</div>
+      <div class="title-badge">Team Leader</div>
+    </div>
+    <div class="contact-col">
+      <div class="contact-row">
+        <span class="label">〒</span>
+        <span class="value">983-0852</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">住所</span>
+        <span class="value small">宮城県仙台市宮城野区榴岡4丁目1-5<br>NBSビル6F</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">TEL</span>
+        <span class="value">022-385-9140</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">Mail</span>
+        <span class="value small">makoto.takahashi@tohoku-datasys.co.jp</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

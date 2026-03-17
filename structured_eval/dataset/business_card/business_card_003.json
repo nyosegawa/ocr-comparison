@@ -1,0 +1,28 @@
+{
+  "id": "business_card_003",
+  "type": "business_card",
+  "metadata": {
+    "industry": "IT",
+    "region": "九州",
+    "scale": "full",
+    "layout_style": "modern_green",
+    "color_scheme": "green",
+    "border_style": "solid",
+    "header_alignment": "split"
+  },
+  "ground_truth": {
+    "person_name": "田中 俊介",
+    "person_name_reading": "たなか しゅんすけ",
+    "company_name": "株式会社キューテックソリューションズ",
+    "company_name_en": "Qtech Solutions Inc.",
+    "department": "システム開発部",
+    "title": "シニアエンジニア",
+    "address": "福岡県福岡市博多区博多駅前3丁目7-10 博多ビジネスセンター8F",
+    "postal_code": "812-0011",
+    "phone": "092-474-8820",
+    "fax": "092-474-8821",
+    "mobile": "090-3412-6677",
+    "email": "shunsuke.tanaka@qtech-solutions.co.jp",
+    "website": "https://www.qtech-solutions.co.jp"
+  }
+}

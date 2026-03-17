@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f0faf4;
+    border: 2px solid #2a8a50;
+  }
+  .header-bar {
+    background: #2a8a50;
+    padding: 7px 14px 6px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .header-left .company-ja {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+  .header-left .company-en {
+    font-size: 6.5px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.05em;
+    margin-top: 1px;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .dept-label {
+    font-size: 7px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+  }
+  .title-label {
+    font-size: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .body {
+    display: flex;
+    height: 164px;
+  }
+  .name-col {
+    width: 140px;
+    padding: 10px 10px 8px 14px;
+    border-right: 2px solid #2a8a50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .name-reading {
+    font-size: 7px;
+    color: #5aaa78;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 2px;
+  }
+  .person-name {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0a3a1a;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+  .green-bar {
+    width: 30px;
+    height: 3px;
+    background: #2a8a50;
+    margin-top: 7px;
+    border-radius: 2px;
+  }
+  .contact-col {
+    flex: 1;
+    padding: 8px 10px 6px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3px;
+  }
+  .label {
+    font-size: 6.5px;
+    color: #2a8a50;
+    font-weight: 700;
+    min-width: 24px;
+    padding-top: 0.5px;
+    letter-spacing: 0.02em;
+  }
+  .value {
+    font-size: 7.5px;
+    color: #1a2a1a;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+  .value.small {
+    font-size: 6.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-left">
+      <div class="company-ja">株式会社九州リテールグループ</div>
+      <div class="company-en">Kyushu Retail Group Co., Ltd.</div>
+    </div>
+    <div class="header-right">
+      <div class="dept-label">マーケティング本部</div>
+      <div class="title-label">マネージャー</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="name-col">
+      <div class="name-reading">わたなべ みほ</div>
+      <div class="person-name">渡辺 美穂</div>
+      <div class="green-bar"></div>
+    </div>
+    <div class="contact-col">
+      <div class="contact-row">
+        <span class="label">〒</span>
+        <span class="value">860-0807</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">住所</span>
+        <span class="value small">熊本県熊本市中央区手取本町6丁目1<br>熊本センタービル5F</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">TEL</span>
+        <span class="value">096-352-4481</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">FAX</span>
+        <span class="value">096-352-4482</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">携帯</span>
+        <span class="value">070-4127-8895</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">Mail</span>
+        <span class="value small">miho.watanabe@kyushu-retail.co.jp</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">Web</span>
+        <span class="value small">https://www.kyushu-retail.co.jp</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

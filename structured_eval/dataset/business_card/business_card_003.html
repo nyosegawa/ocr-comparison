@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f5faf7;
+  }
+  .top-bar {
+    width: 100%;
+    height: 36px;
+    background: #2d8659;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    position: relative;
+  }
+  .top-bar::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 36px 24px 0 0;
+    border-color: #f5faf7 transparent transparent transparent;
+  }
+  .company-ja {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+  .company-en {
+    font-size: 7px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.08em;
+    margin-top: 1px;
+  }
+  .main-area {
+    display: flex;
+    height: 174px;
+  }
+  .left-col {
+    width: 160px;
+    padding: 10px 10px 10px 12px;
+    border-right: 2px solid #2d8659;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .dept-title-block {
+    margin-bottom: 4px;
+  }
+  .dept {
+    font-size: 7.5px;
+    color: #2d8659;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    font-size: 8px;
+    color: #555555;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-top: 1px;
+  }
+  .name-reading {
+    font-size: 7px;
+    color: #888888;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 2px;
+  }
+  .person-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a3a2a;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+  .accent-bar {
+    width: 32px;
+    height: 3px;
+    background: #2d8659;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+  .right-col {
+    flex: 1;
+    padding: 8px 10px 8px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3.5px;
+  }
+  .contact-icon {
+    font-size: 6.5px;
+    color: #2d8659;
+    font-weight: 700;
+    min-width: 22px;
+    padding-top: 1px;
+    letter-spacing: 0.02em;
+  }
+  .contact-text {
+    font-size: 7.5px;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+  .contact-text.small {
+    font-size: 7px;
+  }
+  .geo-decoration {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(45,134,89,0.2);
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar">
+    <div>
+      <div class="company-ja">株式会社キューテックソリューションズ</div>
+      <div class="company-en">Qtech Solutions Inc.</div>
+    </div>
+  </div>
+  <div class="main-area">
+    <div class="left-col">
+      <div>
+        <div class="dept-title-block">
+          <div class="dept">システム開発部</div>
+          <div class="title">シニアエンジニア</div>
+        </div>
+        <div class="name-reading">たなか しゅんすけ</div>
+        <div class="person-name">田中 俊介</div>
+        <div class="accent-bar"></div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="contact-item">
+        <span class="contact-icon">住所</span>
+        <span class="contact-text small">〒812-0011 福岡県福岡市博多区<br>博多駅前3丁目7-10<br>博多ビジネスセンター8F</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">TEL</span>
+        <span class="contact-text">092-474-8820</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">FAX</span>
+        <span class="contact-text">092-474-8821</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">携帯</span>
+        <span class="contact-text">090-3412-6677</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">Mail</span>
+        <span class="contact-text small">shunsuke.tanaka@qtech-solutions.co.jp</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">Web</span>
+        <span class="contact-text small">https://www.qtech-solutions.co.jp</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

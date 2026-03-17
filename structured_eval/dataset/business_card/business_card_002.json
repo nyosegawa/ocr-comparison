@@ -1,0 +1,28 @@
+{
+  "id": "business_card_002",
+  "type": "business_card",
+  "metadata": {
+    "industry": "医療",
+    "region": "四国",
+    "scale": "minimal",
+    "layout_style": "clean_monochrome",
+    "color_scheme": "monochrome",
+    "border_style": "thin",
+    "header_alignment": "center"
+  },
+  "ground_truth": {
+    "person_name": "山本 恵子",
+    "person_name_reading": "やまもと けいこ",
+    "company_name": "医療法人社団 橘クリニック",
+    "company_name_en": null,
+    "department": null,
+    "title": "院長",
+    "address": "愛媛県松山市三番町5丁目12-3",
+    "postal_code": null,
+    "phone": "089-921-4455",
+    "fax": null,
+    "mobile": null,
+    "email": null,
+    "website": null
+  }
+}

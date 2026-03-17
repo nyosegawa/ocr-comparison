@@ -1,0 +1,47 @@
+{
+  "id": "receipt_001",
+  "type": "receipt",
+  "metadata": {
+    "industry": "飲食",
+    "region": "北海道",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "pos_thermal",
+    "paper_width": "58mm",
+    "separator_char": "━",
+    "item_display": "two_line",
+    "total_emphasis": "inverted",
+    "date_format": "2026/03/17 12:34"
+  },
+  "ground_truth": {
+    "receipt_number": "R-20260317-0047",
+    "issue_date": "2026-03-17",
+    "store_name": "手打ちそば 北の里",
+    "store_address": "北海道旭川市宮前1丁目3-8",
+    "store_phone": "0166-23-4571",
+    "store_registration_number": "T3820461935078",
+    "client_name": null,
+    "line_items": [
+      {
+        "description": "ざるそば",
+        "quantity": 1,
+        "unit_price": 850,
+        "amount": 850
+      },
+      {
+        "description": "瓶ビール(中)",
+        "quantity": 1,
+        "unit_price": 600,
+        "amount": 600
+      }
+    ],
+    "subtotal": 1450,
+    "tax_rate_8": 850,
+    "tax_amount_8": 68,
+    "tax_rate_10": 600,
+    "tax_amount_10": 60,
+    "total_amount": 1578,
+    "payment_method": "現金",
+    "notes": null
+  }
+}

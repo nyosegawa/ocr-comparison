@@ -1,0 +1,47 @@
+{
+  "id": "receipt_008",
+  "type": "receipt",
+  "metadata": {
+    "industry": "飲食",
+    "region": "中部",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "pos_thermal",
+    "paper_width": "58mm",
+    "separator_char": "━",
+    "item_display": "two_line",
+    "total_emphasis": "large_font",
+    "date_format": "R8.03.17 12:00"
+  },
+  "ground_truth": {
+    "receipt_number": "R-20260317-0391",
+    "issue_date": "2026-03-17",
+    "store_name": "味噌家 名古屋栄店",
+    "store_address": "愛知県名古屋市中区栄3丁目15-22",
+    "store_phone": "052-263-7841",
+    "store_registration_number": "T4920163857402",
+    "client_name": null,
+    "line_items": [
+      {
+        "description": "味噌カツ定食",
+        "quantity": 1,
+        "unit_price": 950,
+        "amount": 950
+      },
+      {
+        "description": "生ビール(中)",
+        "quantity": 1,
+        "unit_price": 580,
+        "amount": 580
+      }
+    ],
+    "subtotal": 1530,
+    "tax_rate_8": 950,
+    "tax_amount_8": 76,
+    "tax_rate_10": 580,
+    "tax_amount_10": 58,
+    "total_amount": 1664,
+    "payment_method": "現金",
+    "notes": null
+  }
+}

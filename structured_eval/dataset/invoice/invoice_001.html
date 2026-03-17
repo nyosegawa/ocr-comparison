@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=794px">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<title>請求書 INV-2026-0317</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 794px;
+    margin: 0;
+    background: #fff;
+    color: #1a2a4a;
+    font-size: 13px;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 40px 48px;
+    background: #fff;
+  }
+
+  /* Header band */
+  .header-band {
+    background: #1a3d7c;
+    margin: -40px -48px 0 -48px;
+    padding: 28px 48px 22px 48px;
+    text-align: center;
+    border-bottom: 4px solid #f0a500;
+  }
+  .header-band h1 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+  .header-band .doc-number {
+    color: #b8d0f8;
+    font-size: 13px;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Meta row */
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 28px;
+    gap: 24px;
+  }
+  .client-block {
+    flex: 1;
+  }
+  .client-block .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a3d7c;
+    border-bottom: 2px solid #1a3d7c;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  .client-block .client-address {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .invoice-meta {
+    min-width: 220px;
+    border: 1.5px solid #1a3d7c;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .invoice-meta table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .invoice-meta table tr td {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #d0ddf5;
+  }
+  .invoice-meta table tr:last-child td {
+    border-bottom: none;
+  }
+  .invoice-meta table tr td:first-child {
+    background: #eef3fb;
+    font-weight: 700;
+    color: #1a3d7c;
+    white-space: nowrap;
+    width: 80px;
+  }
+  .invoice-meta table tr td:last-child {
+    color: #333;
+  }
+
+  /* Total highlight box */
+  .total-box {
+    background: #1a3d7c;
+    color: #fff;
+    text-align: center;
+    padding: 16px 24px;
+    margin-top: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total-box .label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .total-box .amount {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .total-box .tax-note {
+    font-size: 11px;
+    color: #b8d0f8;
+    margin-top: 2px;
+  }
+
+  /* Vendor info */
+  .vendor-block {
+    margin-top: 20px;
+    text-align: right;
+    border-top: 1px solid #d0ddf5;
+    padding-top: 14px;
+  }
+  .vendor-block .vendor-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a3d7c;
+  }
+  .vendor-block .vendor-detail {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.7;
+    margin-top: 4px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a3d7c;
+    background: #eef3fb;
+    border-left: 4px solid #1a3d7c;
+    padding: 6px 10px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  /* Items table */
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    border: 1.5px solid #1a3d7c;
+  }
+  .items-table thead tr {
+    background: #1a3d7c;
+    color: #fff;
+  }
+  .items-table thead th {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    border-right: 1px solid #2e5299;
+  }
+  .items-table thead th:last-child { border-right: none; }
+  .items-table tbody tr {
+    border-bottom: 1px solid #d0ddf5;
+  }
+  .items-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  .items-table tbody td {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-right: 1px solid #d0ddf5;
+    vertical-align: middle;
+  }
+  .items-table tbody td:last-child { border-right: none; }
+  .items-table tbody td.no { text-align: center; width: 32px; color: #888; }
+  .items-table tbody td.item-name { text-align: left; }
+  .items-table tbody td.num { text-align: right; }
+  .items-table tbody td.unit { text-align: center; }
+  .items-table tbody td.amount { text-align: right; font-weight: 700; }
+  .items-table .col-no { width: 32px; }
+  .items-table .col-item { }
+  .items-table .col-qty { width: 50px; }
+  .items-table .col-unit { width: 46px; }
+  .items-table .col-price { width: 80px; }
+  .items-table .col-amount { width: 90px; }
+
+  /* Totals */
+  .totals-section {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .totals-table {
+    border-collapse: collapse;
+    min-width: 280px;
+    border: 1.5px solid #1a3d7c;
+    border-top: none;
+  }
+  .totals-table tr td {
+    padding: 7px 14px;
+    font-size: 13px;
+    border-bottom: 1px solid #d0ddf5;
+  }
+  .totals-table tr:last-child td { border-bottom: none; }
+  .totals-table tr td:first-child {
+    background: #eef3fb;
+    font-weight: 700;
+    color: #1a3d7c;
+    text-align: left;
+  }
+  .totals-table tr td:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .totals-table .total-row {
+    background: #1a3d7c !important;
+  }
+  .totals-table .total-row td {
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .totals-table .total-row td:first-child {
+    background: #1a3d7c !important;
+  }
+
+  /* Bank / Notes */
+  .two-col {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .bank-block, .notes-block {
+    flex: 1;
+  }
+  .sub-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: #1a3d7c;
+    padding: 5px 10px;
+    margin-bottom: 0;
+  }
+  .bank-content, .notes-content {
+    border: 1.5px solid #1a3d7c;
+    border-top: none;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #333;
+    min-height: 60px;
+  }
+  .bank-content strong {
+    color: #1a3d7c;
+  }
+
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #aaa;
+    border-top: 1px solid #d0ddf5;
+    padding-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header-band">
+    <h1>請 求 書</h1>
+    <div class="doc-number">No. INV-2026-0317</div>
+  </div>
+
+  <div class="meta-row">
+    <div class="client-block">
+      <div class="client-name">東海産業株式会社 御中</div>
+      <div class="client-address">〒471-0000　愛知県豊田市西町1番地 トヨタビル4階</div>
+      <div style="margin-top:10px; font-size:12px; color:#333; line-height:1.7;">
+        下記の通り、ご請求申し上げます。
+      </div>
+    </div>
+    <div>
+      <table style="width:100%; border-collapse:collapse; margin-bottom:12px; min-width:220px;">
+        <tbody>
+          <tr>
+            <td style="padding:5px 10px; background:#eef3fb; font-weight:700; color:#1a3d7c; font-size:12px; border:1px solid #d0ddf5; white-space:nowrap;">請求書番号</td>
+            <td style="padding:5px 10px; font-size:12px; border:1px solid #d0ddf5;">INV-2026-0317</td>
+          </tr>
+          <tr>
+            <td style="padding:5px 10px; background:#eef3fb; font-weight:700; color:#1a3d7c; font-size:12px; border:1px solid #d0ddf5; white-space:nowrap;">発行日</td>
+            <td style="padding:5px 10px; font-size:12px; border:1px solid #d0ddf5;">2026年3月17日</td>
+          </tr>
+          <tr>
+            <td style="padding:5px 10px; background:#eef3fb; font-weight:700; color:#1a3d7c; font-size:12px; border:1px solid #d0ddf5; white-space:nowrap;">支払期限</td>
+            <td style="padding:5px 10px; font-size:12px; border:1px solid #d0ddf5; color:#c0392b; font-weight:700;">2026年4月30日</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="total-box">
+    <div>
+      <div class="label">ご請求金額（税込）</div>
+      <div class="tax-note">消費税10%を含む</div>
+    </div>
+    <div class="amount">¥216,700</div>
+  </div>
+
+  <div class="vendor-block">
+    <div class="vendor-name">株式会社ナゴヤウェブソリューション</div>
+    <div class="vendor-detail">
+      〒460-0008　愛知県名古屋市中区栄三丁目5番12号 栄ビル8階<br>
+      TEL: 052-234-5678<br>
+      登録番号: T3400012345678
+    </div>
+  </div>
+
+  <div class="section-title">明　細</div>
+  <table class="items-table">
+    <thead>
+      <tr>
+        <th class="col-no">No</th>
+        <th class="col-item">品目</th>
+        <th class="col-qty">数量</th>
+        <th class="col-unit">単位</th>
+        <th class="col-price">単価</th>
+        <th class="col-amount">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="no">1</td>
+        <td class="item-name">Webアプリケーション保守管理</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="num">¥50,000</td>
+        <td class="amount">¥50,000</td>
+      </tr>
+      <tr>
+        <td class="no">2</td>
+        <td class="item-name">クラウドサーバー利用料（AWSホスティング）</td>
+        <td class="num">1</td>
+        <td class="unit">ヶ月</td>
+        <td class="num">¥15,000</td>
+        <td class="amount">¥15,000</td>
+      </tr>
+      <tr>
+        <td class="no">3</td>
+        <td class="item-name">SSL証明書更新手数料</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="num">¥12,000</td>
+        <td class="amount">¥12,000</td>
+      </tr>
+      <tr>
+        <td class="no">4</td>
+        <td class="item-name">セキュリティ脆弱性診断</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="num">¥80,000</td>
+        <td class="amount">¥80,000</td>
+      </tr>
+      <tr>
+        <td class="no">5</td>
+        <td class="item-name">技術サポート対応</td>
+        <td class="num">5</td>
+        <td class="unit">時間</td>
+        <td class="num">¥8,000</td>
+        <td class="amount">¥40,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-section">
+    <table class="totals-table">
+      <tr>
+        <td>小計</td>
+        <td>¥197,000</td>
+      </tr>
+      <tr>
+        <td>消費税（10%）</td>
+        <td>¥19,700</td>
+      </tr>
+      <tr class="total-row">
+        <td>合計金額</td>
+        <td>¥216,700</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="bank-block">
+      <div class="sub-section-title">お振込先口座</div>
+      <div class="bank-content">
+        <strong>名古屋銀行</strong> 栄支店<br>
+        普通預金　口座番号：<strong>1234567</strong><br>
+        口座名義：<strong>カ）ナゴヤウェブソリューション</strong>
+      </div>
+    </div>
+    <div class="notes-block">
+      <div class="sub-section-title">備考・注意事項</div>
+      <div class="notes-content">
+        お支払いは指定口座へお振込みください。振込手数料はご負担をお願いいたします。
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    本請求書に関するお問い合わせは、株式会社ナゴヤウェブソリューション（052-234-5678）までご連絡ください。
+  </div>
+
+</div>
+</body>
+</html>

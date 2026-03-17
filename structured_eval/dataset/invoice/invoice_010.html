@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 MFG-R8-0317-010</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #1a2e1a;
+    background: #fff;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 0;
+    background: #fff;
+  }
+  /* GREEN + SPLIT + DOUBLE + STRIPED (industrial) */
+  .header-outer {
+    border-bottom: 4px double #1a5c1a;
+    margin-bottom: 0;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background: #fff;
+  }
+  .header-left-panel {
+    background: #1a5c1a;
+    color: #fff;
+    padding: 22px 28px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .vendor-name-lg { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .vendor-info-sm { font-size: 9px; color: #a5d6a5; line-height: 1.7; }
+  .header-right-panel {
+    flex: 1;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .doc-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a5c1a;
+    letter-spacing: 6px;
+    margin-bottom: 4px;
+  }
+  .doc-meta { font-size: 10px; color: #555; text-align: right; line-height: 1.7; }
+  .doc-meta strong { color: #1a5c1a; }
+  .body-wrap { padding: 20px 36px; }
+  .client-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    border: 2px double #4caf50;
+    padding: 12px 18px;
+  }
+  .client-info .label { font-size: 9px; color: #2e7d32; letter-spacing: 2px; margin-bottom: 3px; }
+  .client-info .name { font-size: 16px; font-weight: 700; color: #1a2e1a; }
+  .client-info .addr { font-size: 10px; color: #4a6a4a; margin-top: 2px; }
+  .reg-inline { font-size: 10px; color: #2e7d32; text-align: right; }
+  .reg-inline .reg-label { font-size: 9px; color: #81c784; letter-spacing: 1px; }
+  /* STRIPED TABLE */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    border: 2px double #1a5c1a;
+  }
+  table.items thead {
+    border-bottom: 2px double #1a5c1a;
+  }
+  table.items th {
+    background: #2e7d32;
+    color: #fff;
+    padding: 7px 9px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    border-right: 1px solid #4caf50;
+  }
+  table.items th:last-child { border-right: none; }
+  table.items tbody tr:nth-child(odd) { background: #fff; }
+  table.items tbody tr:nth-child(even) { background: #e8f5e9; }
+  table.items td {
+    padding: 7px 9px;
+    font-size: 11px;
+    border-right: 1px solid #a5d6a5;
+    border-bottom: 1px solid #c8e6c9;
+    vertical-align: middle;
+  }
+  table.items td:last-child { border-right: none; }
+  table.items td.num { text-align: right; }
+  table.items td.center { text-align: center; }
+  .totals-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px 0 18px;
+  }
+  .totals-frame {
+    border: 2px double #1a5c1a;
+    min-width: 270px;
+  }
+  .totals-frame .t-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 14px;
+    font-size: 11px;
+    border-bottom: 1px solid #c8e6c9;
+    color: #1a2e1a;
+  }
+  .totals-frame .t-row:last-child { border-bottom: none; }
+  .totals-frame .t-row .lbl { color: #2e7d32; font-weight: 700; }
+  .totals-frame .grand {
+    background: #1a5c1a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-top: 2px double #4caf50;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bank-reg-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  .panel {
+    flex: 1;
+    border: 2px double #4caf50;
+    padding: 10px 14px;
+  }
+  .panel-title {
+    font-size: 9px;
+    font-weight: 700;
+    color: #2e7d32;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #c8e6c9;
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+  }
+  .panel-content { font-size: 10px; color: #1a2e1a; line-height: 1.8; }
+  .notes-box {
+    border: 2px double #4caf50;
+    padding: 10px 14px;
+    font-size: 10px;
+    color: #2e4a2e;
+    line-height: 1.7;
+    background: #f1f8f1;
+  }
+  .footer-double {
+    border-top: 4px double #1a5c1a;
+    margin-top: 20px;
+    height: 4px;
+    background: #1a5c1a;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header-outer">
+    <div class="header-inner">
+      <div class="header-left-panel">
+        <div class="vendor-name-lg">株式会社関西精密工業</div>
+        <div class="vendor-info-sm">
+          大阪府東大阪市高井田元町二丁目10番5号<br>
+          TEL: 06-6782-9012
+        </div>
+      </div>
+      <div class="header-right-panel">
+        <div class="doc-title">請　求　書</div>
+        <div class="doc-meta">
+          <strong>MFG-R8-0317-010</strong><br>
+          発行日：令和8年3月17日<br>
+          お支払期限：令和8年4月25日
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-wrap">
+    <div class="client-row">
+      <div class="client-info">
+        <div class="label">請求先</div>
+        <div class="name">京都メカニクス株式会社　御中</div>
+        <div class="addr">京都府京都市伏見区竹田七瀬川町59番地</div>
+      </div>
+      <div class="reg-inline">
+        <div class="reg-label">登録番号</div>
+        T2721087654309
+      </div>
+    </div>
+
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:28px">No</th>
+          <th>品目</th>
+          <th style="width:55px">数量</th>
+          <th style="width:45px">単位</th>
+          <th style="width:85px">単価</th>
+          <th style="width:95px">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center">1</td>
+          <td>金型製作費（プレス型・試作含む）</td>
+          <td class="num">1</td>
+          <td class="center">式</td>
+          <td class="num">¥180,000</td>
+          <td class="num">¥180,000</td>
+        </tr>
+        <tr>
+          <td class="center">2</td>
+          <td>アルミ部品精密加工（旋盤・フライス）</td>
+          <td class="num">200</td>
+          <td class="center">個</td>
+          <td class="num">¥650</td>
+          <td class="num">¥130,000</td>
+        </tr>
+        <tr>
+          <td class="center">3</td>
+          <td>品質検査・寸法測定レポート</td>
+          <td class="num">1</td>
+          <td class="center">式</td>
+          <td class="num">¥35,000</td>
+          <td class="num">¥35,000</td>
+        </tr>
+        <tr>
+          <td class="center">4</td>
+          <td>梱包・配送費（大阪→京都）</td>
+          <td class="num">1</td>
+          <td class="center">式</td>
+          <td class="num">¥8,000</td>
+          <td class="num">¥8,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals-right">
+      <div class="totals-frame">
+        <div class="t-row"><span class="lbl">小計</span><span>¥353,000</span></div>
+        <div class="t-row"><span class="lbl">消費税（10%）</span><span>¥35,300</span></div>
+        <div class="grand"><span>合計金額</span><span>¥388,300</span></div>
+      </div>
+    </div>
+
+    <div class="bank-reg-row">
+      <div class="panel">
+        <div class="panel-title">振込先口座</div>
+        <div class="panel-content">
+          関西みらい銀行　高井田支店<br>
+          普通　8901234<br>
+          カ）カンサイセイミツコウギョウ
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">登録番号</div>
+        <div class="panel-content">T2721087654309</div>
+      </div>
+    </div>
+
+    <div class="notes-box">
+      <strong>備考：</strong>製品の仕様変更・追加工程が発生した場合は、別途お見積りを提出いたします。品質保証期間は納品後6ヶ月とします。
+    </div>
+  </div>
+
+  <div class="footer-double"></div>
+</div>
+</body>
+</html>

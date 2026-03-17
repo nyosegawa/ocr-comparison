@@ -1,0 +1,74 @@
+{
+  "id": "invoice_007",
+  "type": "invoice",
+  "metadata": {
+    "industry": "不動産",
+    "region": "関東",
+    "scale": "medium",
+    "line_items_count": 5,
+    "layout_style": "modern_gray",
+    "color_scheme": "gray",
+    "border_style": "none",
+    "header_alignment": "right",
+    "table_style": "striped",
+    "date_format": "R8.3.17"
+  },
+  "ground_truth": {
+    "invoice_number": "RE-R8-0317-007",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-25",
+    "vendor_name": "株式会社首都圏不動産パートナーズ",
+    "vendor_address": "東京都新宿区西新宿二丁目8番1号 住友不動産ビル10階",
+    "vendor_phone": "03-5321-6789",
+    "vendor_registration_number": "T1300212345670",
+    "client_name": "合同会社タケダプロパティ",
+    "client_address": "東京都渋谷区恵比寿南一丁目3番4号 恵比寿ガーデンプレイス内",
+    "line_items": [
+      {
+        "description": "賃貸物件仲介手数料",
+        "quantity": 1,
+        "unit": "件",
+        "unit_price": 85000,
+        "amount": 85000
+      },
+      {
+        "description": "内装リフォーム工事（クロス張替え）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 120000,
+        "amount": 120000
+      },
+      {
+        "description": "鍵交換費用（玄関・勝手口）",
+        "quantity": 2,
+        "unit": "箇所",
+        "unit_price": 15000,
+        "amount": 30000
+      },
+      {
+        "description": "ハウスクリーニング（2LDK）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 55000,
+        "amount": 55000
+      },
+      {
+        "description": "物件管理費（3月分）",
+        "quantity": 1,
+        "unit": "ヶ月",
+        "unit_price": 22000,
+        "amount": 22000
+      }
+    ],
+    "subtotal": 312000,
+    "tax_rate": 0.10,
+    "tax_amount": 31200,
+    "total_amount": 343200,
+    "bank_name": "三井住友銀行",
+    "bank_branch": "西新宿支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "5678901",
+    "bank_account_holder": "カ）シュトケンフドウサンパートナーズ",
+    "notes": "物件に関するご確認事項がございましたら、担当者（田中）までお気軽にお問い合わせください。"
+  }
+}

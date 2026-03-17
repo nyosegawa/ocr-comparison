@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 RE-R8-0317-007</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #2d2d2d;
+    background: #f7f7f7;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 44px 52px;
+    background: #f7f7f7;
+  }
+  /* GRAY + RIGHT + NO-BORDER + STRIPED */
+  .page-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+  .doc-title-block {
+    text-align: right;
+  }
+  .doc-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3d3d3d;
+    letter-spacing: 5px;
+    line-height: 1;
+  }
+  .doc-en { font-size: 10px; color: #aaa; letter-spacing: 4px; margin-top: 2px; }
+  .main-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .client-block { flex: 1; padding-right: 30px; }
+  .client-label { font-size: 9px; color: #999; letter-spacing: 2px; margin-bottom: 6px; }
+  .client-name { font-size: 16px; font-weight: 700; color: #2d2d2d; margin-bottom: 4px; }
+  .client-address { font-size: 10px; color: #666; }
+  .invoice-meta { text-align: right; min-width: 210px; }
+  .meta-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .meta-line .lbl { font-size: 9px; color: #999; letter-spacing: 1px; }
+  .meta-line .val { font-size: 12px; font-weight: 700; color: #3d3d3d; }
+  .vendor-strip {
+    background: #e8e8e8;
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+  }
+  .vendor-name-sm { font-size: 12px; font-weight: 700; color: #3d3d3d; }
+  .vendor-info { font-size: 10px; color: #666; text-align: right; }
+  /* STRIPED TABLE, NO BORDERS */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  table.items thead tr {
+    background: #3d3d3d;
+  }
+  table.items th {
+    padding: 7px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    border: none;
+  }
+  table.items tbody tr:nth-child(odd) { background: #efefef; }
+  table.items tbody tr:nth-child(even) { background: #e0e0e0; }
+  table.items td {
+    padding: 8px 10px;
+    font-size: 11px;
+    border: none;
+    vertical-align: middle;
+    color: #2d2d2d;
+  }
+  table.items td.num { text-align: right; }
+  table.items td.center { text-align: center; }
+  .totals-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 24px;
+  }
+  .totals-panel {
+    background: #e8e8e8;
+    padding: 14px 20px;
+    min-width: 260px;
+  }
+  .t-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 11px;
+    color: #444;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  .t-line.grand {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d2d2d;
+    border-top: 2px solid #3d3d3d;
+    border-bottom: none;
+    padding-top: 8px;
+    margin-top: 4px;
+  }
+  .lower-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  .info-panel {
+    background: #e8e8e8;
+    padding: 10px 16px;
+    min-width: 200px;
+    text-align: right;
+  }
+  .info-panel .panel-title { font-size: 9px; color: #888; letter-spacing: 2px; margin-bottom: 5px; }
+  .info-panel .panel-val { font-size: 10px; color: #3d3d3d; line-height: 1.7; }
+  .notes-area {
+    text-align: right;
+    font-size: 10px;
+    color: #777;
+    line-height: 1.7;
+    padding-right: 4px;
+  }
+  .notes-area strong { color: #555; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page-top">
+    <div class="doc-title-block">
+      <div class="doc-title">請　求　書</div>
+      <div class="doc-en">INVOICE</div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="client-block">
+      <div class="client-label">BILL TO</div>
+      <div class="client-name">合同会社タケダプロパティ　御中</div>
+      <div class="client-address">東京都渋谷区恵比寿南一丁目3番4号 恵比寿ガーデンプレイス内</div>
+    </div>
+    <div class="invoice-meta">
+      <div class="meta-line"><span class="lbl">請求書番号</span><span class="val">RE-R8-0317-007</span></div>
+      <div class="meta-line"><span class="lbl">発行日</span><span class="val">R8.3.17</span></div>
+      <div class="meta-line"><span class="lbl">お支払期限</span><span class="val">R8.4.25</span></div>
+    </div>
+  </div>
+
+  <div class="vendor-strip">
+    <div class="vendor-name-sm">株式会社首都圏不動産パートナーズ</div>
+    <div class="vendor-info">東京都新宿区西新宿二丁目8番1号 住友不動産ビル10階<br>TEL: 03-5321-6789　登録番号: T1300212345670</div>
+  </div>
+
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:28px">No</th>
+        <th>品目</th>
+        <th style="width:55px">数量</th>
+        <th style="width:55px">単位</th>
+        <th style="width:85px">単価</th>
+        <th style="width:95px">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td>賃貸物件仲介手数料</td>
+        <td class="num">1</td>
+        <td class="center">件</td>
+        <td class="num">¥85,000</td>
+        <td class="num">¥85,000</td>
+      </tr>
+      <tr>
+        <td class="center">2</td>
+        <td>内装リフォーム工事（クロス張替え）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥120,000</td>
+        <td class="num">¥120,000</td>
+      </tr>
+      <tr>
+        <td class="center">3</td>
+        <td>鍵交換費用（玄関・勝手口）</td>
+        <td class="num">2</td>
+        <td class="center">箇所</td>
+        <td class="num">¥15,000</td>
+        <td class="num">¥30,000</td>
+      </tr>
+      <tr>
+        <td class="center">4</td>
+        <td>ハウスクリーニング（2LDK）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥55,000</td>
+        <td class="num">¥55,000</td>
+      </tr>
+      <tr>
+        <td class="center">5</td>
+        <td>物件管理費（3月分）</td>
+        <td class="num">1</td>
+        <td class="center">ヶ月</td>
+        <td class="num">¥22,000</td>
+        <td class="num">¥22,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-right">
+    <div class="totals-panel">
+      <div class="t-line"><span>小計</span><span>¥312,000</span></div>
+      <div class="t-line"><span>消費税（10%）</span><span>¥31,200</span></div>
+      <div class="t-line grand"><span>合計金額</span><span>¥343,200</span></div>
+    </div>
+  </div>
+
+  <div class="lower-row">
+    <div class="info-panel">
+      <div class="panel-title">振込先口座</div>
+      <div class="panel-val">三井住友銀行　西新宿支店<br>普通　5678901<br>カ）シュトケンフドウサンパートナーズ</div>
+    </div>
+    <div class="info-panel">
+      <div class="panel-title">登録番号</div>
+      <div class="panel-val">T1300212345670</div>
+    </div>
+  </div>
+
+  <div class="notes-area">
+    <strong>備考：</strong>物件に関するご確認事項がございましたら、担当者（田中）までお気軽にお問い合わせください。
+  </div>
+</div>
+</body>
+</html>

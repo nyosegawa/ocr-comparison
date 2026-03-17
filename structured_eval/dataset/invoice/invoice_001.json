@@ -1,0 +1,74 @@
+{
+  "id": "invoice_001",
+  "type": "invoice",
+  "metadata": {
+    "industry": "IT",
+    "region": "愛知県",
+    "scale": "medium",
+    "line_items_count": 5,
+    "layout_style": "formal_blue",
+    "color_scheme": "blue",
+    "border_style": "solid",
+    "header_alignment": "center",
+    "table_style": "bordered",
+    "date_format": "2026年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "INV-2026-0317",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-30",
+    "vendor_name": "株式会社ナゴヤウェブソリューション",
+    "vendor_address": "愛知県名古屋市中区栄三丁目5番12号 栄ビル8階",
+    "vendor_phone": "052-234-5678",
+    "vendor_registration_number": "T3400012345678",
+    "client_name": "東海産業株式会社",
+    "client_address": "愛知県豊田市西町1番地 トヨタビル4階",
+    "line_items": [
+      {
+        "description": "Webアプリケーション保守管理",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 50000,
+        "amount": 50000
+      },
+      {
+        "description": "クラウドサーバー利用料（AWSホスティング）",
+        "quantity": 1,
+        "unit": "ヶ月",
+        "unit_price": 15000,
+        "amount": 15000
+      },
+      {
+        "description": "SSL証明書更新手数料",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 12000,
+        "amount": 12000
+      },
+      {
+        "description": "セキュリティ脆弱性診断",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 80000,
+        "amount": 80000
+      },
+      {
+        "description": "技術サポート対応",
+        "quantity": 5,
+        "unit": "時間",
+        "unit_price": 8000,
+        "amount": 40000
+      }
+    ],
+    "subtotal": 197000,
+    "tax_rate": 0.1,
+    "tax_amount": 19700,
+    "total_amount": 216700,
+    "bank_name": "名古屋銀行",
+    "bank_branch": "栄支店",
+    "bank_account_type": "普通預金",
+    "bank_account_number": "1234567",
+    "bank_account_holder": "カ）ナゴヤウェブソリューション",
+    "notes": "お支払いは指定口座へお振込みください。振込手数料はご負担をお願いいたします。"
+  }
+}

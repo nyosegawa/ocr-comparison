@@ -1,0 +1,47 @@
+{
+  "id": "receipt_006",
+  "type": "receipt",
+  "metadata": {
+    "industry": "教育",
+    "region": "東北",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "pos_thermal",
+    "paper_width": "58mm",
+    "separator_char": "-",
+    "item_display": "two_line",
+    "total_emphasis": "double_line",
+    "date_format": "2026年03月17日 10時30分"
+  },
+  "ground_truth": {
+    "receipt_number": "EDU-20260317-0103",
+    "issue_date": "2026-03-17",
+    "store_name": "東北学習堂 仙台駅前店",
+    "store_address": "宮城県仙台市青葉区中央1丁目6-9",
+    "store_phone": "022-721-4680",
+    "store_registration_number": "T2574839016247",
+    "client_name": null,
+    "line_items": [
+      {
+        "description": "大学入試参考書",
+        "quantity": 1,
+        "unit_price": 2400,
+        "amount": 2400
+      },
+      {
+        "description": "ノート3冊セット",
+        "quantity": 1,
+        "unit_price": 550,
+        "amount": 550
+      }
+    ],
+    "subtotal": 2950,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 2950,
+    "tax_amount_10": 295,
+    "total_amount": 3245,
+    "payment_method": "現金",
+    "notes": null
+  }
+}

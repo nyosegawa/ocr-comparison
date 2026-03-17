@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請求書 R8-INV-0317-005</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #1a3a1a;
+    background: #fff;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 50px 56px;
+    background: #fff;
+  }
+  /* GREEN + CENTER + THIN + MINIMAL */
+  .top-accent {
+    height: 6px;
+    background: linear-gradient(90deg, #2e7d32, #81c784);
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+  .doc-title {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .doc-subtitle {
+    text-align: center;
+    font-size: 10px;
+    color: #66aa66;
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+  }
+  .client-block {
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #c8e6c9;
+  }
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .client-address { font-size: 11px; color: #558b2f; }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 28px;
+  }
+  .meta-item { text-align: center; }
+  .meta-item .label {
+    font-size: 9px;
+    color: #81c784;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .meta-item .value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2e7d32;
+  }
+  .vendor-block {
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 14px;
+    background: #f1f8e9;
+    border-radius: 4px;
+  }
+  .vendor-name { font-size: 13px; font-weight: 700; color: #33691e; margin-bottom: 4px; }
+  .vendor-detail { font-size: 10px; color: #558b2f; line-height: 1.7; }
+  /* MINIMAL TABLE */
+  .items-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #2e7d32;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  table.items thead tr {
+    border-top: 1px solid #2e7d32;
+    border-bottom: 1px solid #2e7d32;
+  }
+  table.items th {
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #2e7d32;
+    text-align: center;
+    background: transparent;
+  }
+  table.items tbody tr {
+    border-bottom: 1px solid #e8f5e9;
+  }
+  table.items td {
+    padding: 7px 8px;
+    font-size: 11px;
+    color: #1a3a1a;
+    vertical-align: middle;
+  }
+  table.items td.num { text-align: right; }
+  table.items td.center { text-align: center; }
+  .totals-block {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 24px;
+  }
+  .totals-inner {
+    width: 300px;
+    border-top: 1px solid #a5d6a7;
+    padding-top: 10px;
+  }
+  .total-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 11px;
+    color: #2e7d32;
+    border-bottom: 1px solid #e8f5e9;
+  }
+  .total-line.grand {
+    border-top: 2px solid #2e7d32;
+    border-bottom: 2px solid #2e7d32;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1b5e20;
+    padding: 6px 0;
+    margin-top: 4px;
+  }
+  .bottom-section {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  .bank-block {
+    flex: 1;
+    background: #f1f8e9;
+    border-radius: 4px;
+    padding: 12px 16px;
+  }
+  .block-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #2e7d32;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .block-content { font-size: 10px; color: #33691e; line-height: 1.8; text-align: center; }
+  .reg-block {
+    flex: 1;
+    text-align: center;
+    padding: 12px 16px;
+    background: #f1f8e9;
+    border-radius: 4px;
+  }
+  .notes-block {
+    background: #f9fbe7;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 10px;
+    color: #558b2f;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .bottom-accent {
+    height: 4px;
+    background: linear-gradient(90deg, #81c784, #2e7d32);
+    margin-top: 28px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-accent"></div>
+
+  <div class="doc-title">請　求　書</div>
+  <div class="doc-subtitle">INVOICE</div>
+
+  <div class="client-block">
+    <div class="client-name">おかやまセレクトショップ株式会社　御中</div>
+    <div class="client-address">岡山県岡山市北区表町二丁目4番6号</div>
+  </div>
+
+  <div class="meta-row">
+    <div class="meta-item">
+      <div class="label">請求書番号</div>
+      <div class="value">R8-INV-0317-005</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">発行日</div>
+      <div class="value">令和8年3月17日</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">お支払期限</div>
+      <div class="value">令和8年4月15日</div>
+    </div>
+  </div>
+
+  <div class="vendor-block">
+    <div class="vendor-name">株式会社山陽リテールサポート</div>
+    <div class="vendor-detail">
+      広島県広島市中区紙屋町一丁目2番3号 中央ビル2階　TEL: 082-245-6789
+    </div>
+  </div>
+
+  <div class="items-title">明　細</div>
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:30px">No</th>
+        <th>品目</th>
+        <th style="width:55px">数量</th>
+        <th style="width:40px">単位</th>
+        <th style="width:85px">単価</th>
+        <th style="width:95px">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td>商品仕入（雑貨・日用品）</td>
+        <td class="num">1</td>
+        <td class="center">式</td>
+        <td class="num">¥5,200</td>
+        <td class="num">¥5,200</td>
+      </tr>
+      <tr>
+        <td class="center">2</td>
+        <td>包装資材（紙袋・緩衝材）</td>
+        <td class="num">200</td>
+        <td class="center">枚</td>
+        <td class="num">¥18</td>
+        <td class="num">¥3,600</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-block">
+    <div class="totals-inner">
+      <div class="total-line"><span>小計</span><span>¥8,800</span></div>
+      <div class="total-line"><span>消費税（10%）</span><span>¥880</span></div>
+      <div class="total-line grand"><span>合計金額</span><span>¥9,680</span></div>
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="bank-block">
+      <div class="block-title">振込先口座</div>
+      <div class="block-content">
+        もみじ銀行　紙屋町支店<br>
+        普通　3456789<br>
+        カ）サンヨウリテールサポート
+      </div>
+    </div>
+    <div class="reg-block">
+      <div class="block-title">登録番号</div>
+      <div class="block-content">T3400187654321</div>
+    </div>
+  </div>
+
+  <div class="notes-block">
+    <strong>備考：</strong>振込手数料はお客様にてご負担いただきますようお願いいたします。
+  </div>
+
+  <div class="bottom-accent"></div>
+</div>
+</body>
+</html>

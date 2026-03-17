@@ -1,0 +1,28 @@
+{
+  "id": "business_card_006",
+  "type": "business_card",
+  "metadata": {
+    "industry": "小売",
+    "region": "東北",
+    "scale": "minimal",
+    "layout_style": "simple_monochrome",
+    "color_scheme": "monochrome",
+    "border_style": "dashed",
+    "header_alignment": "center"
+  },
+  "ground_truth": {
+    "person_name": "伊藤 さくら",
+    "person_name_reading": "いとう さくら",
+    "company_name": "有限会社みちのく雑貨店",
+    "company_name_en": null,
+    "department": null,
+    "title": "店長",
+    "address": null,
+    "postal_code": null,
+    "phone": "019-624-3870",
+    "fax": null,
+    "mobile": null,
+    "email": null,
+    "website": null
+  }
+}

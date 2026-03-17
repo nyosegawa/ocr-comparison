@@ -1,0 +1,53 @@
+{
+  "id": "invoice_008",
+  "type": "invoice",
+  "metadata": {
+    "industry": "教育",
+    "region": "九州",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "friendly_warm",
+    "color_scheme": "warm",
+    "border_style": "dashed",
+    "header_alignment": "center",
+    "table_style": "compact",
+    "date_format": "2026/03/17"
+  },
+  "ground_truth": {
+    "invoice_number": "EDU-2026-0317-008",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-10",
+    "vendor_name": "有限会社九州エデュケーションサポート",
+    "vendor_address": "福岡県福岡市博多区博多駅前三丁目2番1号 博多センタービル5階",
+    "vendor_phone": "092-473-5678",
+    "vendor_registration_number": "T4000254321098",
+    "client_name": "学校法人博多学園",
+    "client_address": "福岡県福岡市中央区天神一丁目15番5号",
+    "line_items": [
+      {
+        "description": "テキスト印刷・製本費用（春期コース用）",
+        "quantity": 50,
+        "unit": "冊",
+        "unit_price": 120,
+        "amount": 6000
+      },
+      {
+        "description": "教材開発費（デジタルワークシート作成）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 2500,
+        "amount": 2500
+      }
+    ],
+    "subtotal": 8500,
+    "tax_rate": 0.10,
+    "tax_amount": 850,
+    "total_amount": 9350,
+    "bank_name": "西日本シティ銀行",
+    "bank_branch": "博多駅前支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "6789012",
+    "bank_account_holder": "ユ）キュウシュウエデュケーションサポート",
+    "notes": "教材の内容に関するご要望・修正依頼はお気軽にご連絡ください。次回ご注文より割引サービスをご利用いただけます。"
+  }
+}

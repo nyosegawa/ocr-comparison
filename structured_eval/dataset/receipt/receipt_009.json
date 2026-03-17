@@ -1,0 +1,71 @@
+{
+  "id": "receipt_009",
+  "type": "receipt",
+  "metadata": {
+    "industry": "製造",
+    "region": "近畿",
+    "scale": "large",
+    "line_items_count": 6,
+    "layout_style": "pos_thermal",
+    "paper_width": "80mm",
+    "separator_char": "*",
+    "item_display": "inline_qty",
+    "total_emphasis": "double_line",
+    "date_format": "2026年03月17日 15時00分"
+  },
+  "ground_truth": {
+    "receipt_number": "MFG-20260317-0076",
+    "issue_date": "2026-03-17",
+    "store_name": "阪神工具資材 東大阪店",
+    "store_address": "大阪府東大阪市高井田元町1丁目4-30",
+    "store_phone": "06-6781-2940",
+    "store_registration_number": "T3058174629301",
+    "client_name": "上様",
+    "line_items": [
+      {
+        "description": "精密旋盤刃D13",
+        "quantity": 10,
+        "unit_price": 28000,
+        "amount": 280000
+      },
+      {
+        "description": "グラインダー砥石",
+        "quantity": 50,
+        "unit_price": 3600,
+        "amount": 180000
+      },
+      {
+        "description": "防護メガネ",
+        "quantity": 30,
+        "unit_price": 2200,
+        "amount": 66000
+      },
+      {
+        "description": "切削油20L缶",
+        "quantity": 20,
+        "unit_price": 5800,
+        "amount": 116000
+      },
+      {
+        "description": "工具箱(大)",
+        "quantity": 8,
+        "unit_price": 12500,
+        "amount": 100000
+      },
+      {
+        "description": "耐熱手袋(対)",
+        "quantity": 40,
+        "unit_price": 1800,
+        "amount": 72000
+      }
+    ],
+    "subtotal": 814000,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 814000,
+    "tax_amount_10": 81400,
+    "total_amount": 895400,
+    "payment_method": "銀行振込",
+    "notes": "注文番号：ORD-2026-00312"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "invoice_002",
+  "type": "invoice",
+  "metadata": {
+    "industry": "製造",
+    "region": "福岡県",
+    "scale": "large",
+    "line_items_count": 8,
+    "layout_style": "industrial_gray",
+    "color_scheme": "gray",
+    "border_style": "thin",
+    "header_alignment": "left",
+    "table_style": "striped",
+    "date_format": "2026/03/17"
+  },
+  "ground_truth": {
+    "invoice_number": "2026-KYU-00183",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-20",
+    "vendor_name": "北九州精密工業株式会社",
+    "vendor_address": "福岡県北九州市小倉北区中島二丁目10番3号",
+    "vendor_phone": "093-521-4400",
+    "vendor_registration_number": "T4000098765432",
+    "client_name": "株式会社キュウシュウテクノパーツ",
+    "client_address": "福岡県福岡市博多区博多駅前二丁目8番22号 博多ビジネスセンター3階",
+    "line_items": [
+      {
+        "description": "プレス用金型製作（型番：KM-2026-A）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 280000,
+        "amount": 280000
+      },
+      {
+        "description": "アルミ部品加工（Aシリーズ　品番A-101）",
+        "quantity": 200,
+        "unit": "個",
+        "unit_price": 850,
+        "amount": 170000
+      },
+      {
+        "description": "ステンレス部品加工（Bシリーズ　品番B-205）",
+        "quantity": 150,
+        "unit": "個",
+        "unit_price": 1200,
+        "amount": 180000
+      },
+      {
+        "description": "表面処理（アルマイト加工）",
+        "quantity": 350,
+        "unit": "個",
+        "unit_price": 320,
+        "amount": 112000
+      },
+      {
+        "description": "品質検査・検査報告書作成",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 45000,
+        "amount": 45000
+      },
+      {
+        "description": "梱包・出荷作業費",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 28000,
+        "amount": 28000
+      },
+      {
+        "description": "材料費（アルミ合金A5052）",
+        "quantity": 120,
+        "unit": "kg",
+        "unit_price": 650,
+        "amount": 78000
+      },
+      {
+        "description": "設計変更対応費",
+        "quantity": 2,
+        "unit": "時間",
+        "unit_price": 15000,
+        "amount": 30000
+      }
+    ],
+    "subtotal": 923000,
+    "tax_rate": 0.1,
+    "tax_amount": 92300,
+    "total_amount": 1015300,
+    "bank_name": "福岡銀行",
+    "bank_branch": "小倉支店",
+    "bank_account_type": "普通預金",
+    "bank_account_number": "7654321",
+    "bank_account_holder": "キタキュウシュウセイミツコウギョウ（カ",
+    "notes": "納品書・検査成績書は別途郵送いたします。支払期日を厳守くださいますようお願い申し上げます。"
+  }
+}

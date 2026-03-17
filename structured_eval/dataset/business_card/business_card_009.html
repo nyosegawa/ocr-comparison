@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #ffffff;
+  }
+  .card-inner {
+    width: 346px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-band {
+    width: 100%;
+    height: 4px;
+    background: #222222;
+  }
+  .company-block {
+    width: 100%;
+    padding: 10px 20px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .company-name {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: 0.05em;
+  }
+  .body-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px 6px;
+  }
+  .dept-title-line {
+    font-size: 7.5px;
+    color: #666666;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .name-reading {
+    font-size: 7.5px;
+    color: #aaaaaa;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  .person-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: 0.08em;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .bottom-contacts {
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    padding: 7px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .label {
+    font-size: 7px;
+    color: #444444;
+    font-weight: 700;
+    min-width: 26px;
+    letter-spacing: 0.03em;
+    text-align: right;
+  }
+  .value {
+    font-size: 7.5px;
+    color: #222222;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .value.small {
+    font-size: 7px;
+  }
+  .bottom-band {
+    width: 100%;
+    height: 4px;
+    background: #222222;
+    margin-top: auto;
+  }
+</style>
+</head>
+<body>
+  <div class="card-inner">
+    <div class="top-band"></div>
+    <div class="company-block">
+      <div class="company-name">合同会社コードラボ四国</div>
+    </div>
+    <div class="body-area">
+      <div class="dept-title-line">プロダクト開発部　フルスタックエンジニア</div>
+      <div class="name-reading">こばやし けんた</div>
+      <div class="person-name">小林 健太</div>
+    </div>
+    <div class="bottom-contacts">
+      <div class="contact-row">
+        <span class="label">住所</span>
+        <span class="value small">〒790-0003 愛媛県松山市大手町2丁目5-10 松山ITビル4F</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">TEL</span>
+        <span class="value">089-945-6203</span>
+      </div>
+      <div class="contact-row">
+        <span class="label">Mail</span>
+        <span class="value small">kenta.kobayashi@codelab-shikoku.co.jp</span>
+      </div>
+    </div>
+    <div class="bottom-band"></div>
+  </div>
+</body>
+</html>

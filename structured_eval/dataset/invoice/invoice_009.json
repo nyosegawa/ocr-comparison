@@ -1,0 +1,81 @@
+{
+  "id": "invoice_009",
+  "type": "invoice",
+  "metadata": {
+    "industry": "IT",
+    "region": "四国",
+    "scale": "large",
+    "line_items_count": 6,
+    "layout_style": "technical_monochrome",
+    "color_scheme": "monochrome",
+    "border_style": "solid",
+    "header_alignment": "left",
+    "table_style": "bordered",
+    "date_format": "2026年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "IT-2026-0317-009",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-04-30",
+    "vendor_name": "株式会社四国テックラボ",
+    "vendor_address": "香川県高松市番町一丁目8番15号 高松センタービル7階",
+    "vendor_phone": "087-822-3456",
+    "vendor_registration_number": "T3700276543210",
+    "client_name": "愛媛データシステム株式会社",
+    "client_address": "愛媛県松山市一番町四丁目4番2号",
+    "line_items": [
+      {
+        "description": "業務システム開発（受発注管理モジュール）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 350000,
+        "amount": 350000
+      },
+      {
+        "description": "クラウドインフラ構築（AWS環境設計・構築）",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 180000,
+        "amount": 180000
+      },
+      {
+        "description": "クラウド利用料（3月分・EC2・RDS含む）",
+        "quantity": 1,
+        "unit": "ヶ月",
+        "unit_price": 42000,
+        "amount": 42000
+      },
+      {
+        "description": "セキュリティ監査・レポート作成",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 95000,
+        "amount": 95000
+      },
+      {
+        "description": "システム保守運用（月次）",
+        "quantity": 1,
+        "unit": "ヶ月",
+        "unit_price": 60000,
+        "amount": 60000
+      },
+      {
+        "description": "技術研修・オンボーディング支援",
+        "quantity": 8,
+        "unit": "時間",
+        "unit_price": 12000,
+        "amount": 96000
+      }
+    ],
+    "subtotal": 823000,
+    "tax_rate": 0.10,
+    "tax_amount": 82300,
+    "total_amount": 905300,
+    "bank_name": "百十四銀行",
+    "bank_branch": "高松本町支店",
+    "bank_account_type": "普通",
+    "bank_account_number": "7890123",
+    "bank_account_holder": "カ）シコクテックラボ",
+    "notes": "各作業の詳細は別途作業報告書をご参照ください。次月以降の保守契約については担当者よりご連絡いたします。"
+  }
+}

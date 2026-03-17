@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=346, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 346px;
+    height: 210px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #fafafa;
+    border: 0.5px solid #cccccc;
+  }
+  .card-inner {
+    width: 346px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 24px 0 20px;
+  }
+  .clinic-name {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3a3a3a;
+    letter-spacing: 0.05em;
+    text-align: right;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .clinic-name .parent {
+    font-size: 8px;
+    font-weight: 300;
+    color: #777777;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .title-text {
+    font-size: 8.5px;
+    color: #888888;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: right;
+    margin-bottom: 8px;
+  }
+  .thin-rule {
+    width: 80px;
+    height: 0.5px;
+    background: #bbbbbb;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+  .name-reading {
+    font-size: 8px;
+    color: #aaaaaa;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-align: right;
+    margin-bottom: 2px;
+  }
+  .person-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2a2a2a;
+    letter-spacing: 0.06em;
+    text-align: right;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .thin-rule2 {
+    width: 60px;
+    height: 0.5px;
+    background: #cccccc;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+  .phone-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .phone-label {
+    font-size: 7px;
+    color: #999999;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+  }
+  .phone-value {
+    font-size: 9px;
+    color: #333333;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+  <div class="card-inner">
+    <div class="clinic-name">
+      <span class="parent">医療法人清和会</span>
+      西田内科クリニック
+    </div>
+    <div class="title-text">院長・理事長</div>
+    <div class="thin-rule"></div>
+    <div class="name-reading">にしだ かずお</div>
+    <div class="person-name">西田 和夫</div>
+    <div class="thin-rule2"></div>
+    <div class="phone-line">
+      <span class="phone-label">TEL</span>
+      <span class="phone-value">095-842-7760</span>
+    </div>
+  </div>
+</body>
+</html>

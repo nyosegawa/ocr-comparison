@@ -1,0 +1,53 @@
+{
+  "id": "invoice_003",
+  "type": "invoice",
+  "metadata": {
+    "industry": "建設",
+    "region": "北海道",
+    "scale": "small",
+    "line_items_count": 2,
+    "layout_style": "simple_warm",
+    "color_scheme": "warm",
+    "border_style": "double",
+    "header_alignment": "right",
+    "table_style": "minimal",
+    "date_format": "令和8年3月17日"
+  },
+  "ground_truth": {
+    "invoice_number": "R8-0317-001",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-31",
+    "vendor_name": "北海道クリーン建設有限会社",
+    "vendor_address": "北海道札幌市白石区菊水八条二丁目3番15号",
+    "vendor_phone": "011-867-2233",
+    "vendor_registration_number": "T1000056789012",
+    "client_name": "株式会社サッポロ不動産管理",
+    "client_address": "北海道札幌市中央区北二条西四丁目1番地 札幌センタービル5階",
+    "line_items": [
+      {
+        "description": "解体後現場清掃作業",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 4500,
+        "amount": 4500
+      },
+      {
+        "description": "廃材運搬・処理費",
+        "quantity": 1,
+        "unit": "式",
+        "unit_price": 3500,
+        "amount": 3500
+      }
+    ],
+    "subtotal": 8000,
+    "tax_rate": 0.1,
+    "tax_amount": 800,
+    "total_amount": 8800,
+    "bank_name": "北洋銀行",
+    "bank_branch": "白石支店",
+    "bank_account_type": "普通預金",
+    "bank_account_number": "3456789",
+    "bank_account_holder": "ホッカイドウクリーンケンセツ（ユ",
+    "notes": "工事完了確認後、速やかにお振込みいただけますと幸いです。領収書は振込確認後に発行いたします。"
+  }
+}

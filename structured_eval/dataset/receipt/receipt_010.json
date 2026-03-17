@@ -1,0 +1,53 @@
+{
+  "id": "receipt_010",
+  "type": "receipt",
+  "metadata": {
+    "industry": "小売",
+    "region": "北海道",
+    "scale": "medium",
+    "line_items_count": 3,
+    "layout_style": "pos_thermal",
+    "paper_width": "58mm",
+    "separator_char": "-",
+    "item_display": "one_line",
+    "total_emphasis": "inverted",
+    "date_format": "2026/03/17 11:20"
+  },
+  "ground_truth": {
+    "receipt_number": "0001547",
+    "issue_date": "2026-03-17",
+    "store_name": "ホームプラザ 札幌手稲店",
+    "store_address": "北海道札幌市手稲区前田7条11丁目2-5",
+    "store_phone": "011-692-3870",
+    "store_registration_number": "T1739204865037",
+    "client_name": null,
+    "line_items": [
+      {
+        "description": "電気ケトル1.2L",
+        "quantity": 1,
+        "unit_price": 4980,
+        "amount": 4980
+      },
+      {
+        "description": "マグカップ2P",
+        "quantity": 2,
+        "unit_price": 1200,
+        "amount": 2400
+      },
+      {
+        "description": "ミニ加湿器",
+        "quantity": 1,
+        "unit_price": 6800,
+        "amount": 6800
+      }
+    ],
+    "subtotal": 14180,
+    "tax_rate_8": null,
+    "tax_amount_8": null,
+    "tax_rate_10": 14180,
+    "tax_amount_10": 1418,
+    "total_amount": 15598,
+    "payment_method": "電子マネー",
+    "notes": null
+  }
+}

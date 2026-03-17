@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=794px">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<title>請求書 2026-KYU-00183</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 794px;
+    margin: 0;
+    background: #f5f5f3;
+    color: #2c2c2c;
+    font-size: 12px;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 36px 44px;
+    background: #f5f5f3;
+  }
+
+  /* Header: left-aligned industrial */
+  .header-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 3px solid #555;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+  .header-left .doc-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c2c2c;
+    letter-spacing: 0.15em;
+    line-height: 1;
+  }
+  .header-left .doc-subtitle {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .header-right .vendor-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+  .header-right .vendor-detail {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 3px;
+  }
+
+  /* Info strip */
+  .info-strip {
+    display: flex;
+    gap: 0;
+    margin-bottom: 18px;
+    border: 1px solid #bbb;
+  }
+  .info-cell {
+    flex: 1;
+    padding: 8px 12px;
+    border-right: 1px solid #bbb;
+  }
+  .info-cell:last-child { border-right: none; }
+  .info-cell .ic-label {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+  .info-cell .ic-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+  .info-cell .ic-value.due {
+    color: #8b1a1a;
+  }
+
+  /* Client block */
+  .client-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .client-info {
+    flex: 1;
+    background: #ebebeb;
+    border: 1px solid #bbb;
+    padding: 12px 16px;
+  }
+  .client-info .label {
+    font-size: 10px;
+    color: #777;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+  .client-info .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+  .client-info .address {
+    font-size: 11px;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+
+  .total-summary {
+    min-width: 200px;
+    background: #2c2c2c;
+    color: #fff;
+    padding: 14px 18px;
+    text-align: center;
+    border: 2px solid #2c2c2c;
+  }
+  .total-summary .ts-label {
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .total-summary .ts-amount {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .total-summary .ts-tax {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 2px;
+  }
+
+  /* Items table — striped */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    margin-top: 0;
+    border-left: 3px solid #888;
+    padding-left: 8px;
+  }
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    border: 1px solid #bbb;
+  }
+  .items-table thead tr {
+    background: #555;
+    color: #fff;
+  }
+  .items-table thead th {
+    padding: 7px 9px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    border-right: 1px solid #777;
+    letter-spacing: 0.05em;
+  }
+  .items-table thead th:last-child { border-right: none; }
+  .items-table tbody tr:nth-child(even) {
+    background: #eaeaea;
+  }
+  .items-table tbody tr:nth-child(odd) {
+    background: #f5f5f3;
+  }
+  .items-table tbody tr {
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .items-table tbody td {
+    padding: 7px 9px;
+    font-size: 11px;
+    border-right: 1px solid #d5d5d5;
+    vertical-align: middle;
+  }
+  .items-table tbody td:last-child { border-right: none; }
+  .items-table td.no { text-align: center; width: 28px; color: #999; font-size: 10px; }
+  .items-table td.item-name { text-align: left; }
+  .items-table td.num { text-align: right; }
+  .items-table td.unit { text-align: center; width: 42px; }
+  .items-table td.price { text-align: right; width: 78px; }
+  .items-table td.amount { text-align: right; width: 84px; font-weight: 700; }
+
+  /* Totals row */
+  .totals-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  .totals-inner {
+    width: 280px;
+    border: 1px solid #bbb;
+    border-top: none;
+  }
+  .totals-inner table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .totals-inner table tr td {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  .totals-inner table tr:last-child td { border-bottom: none; }
+  .totals-inner table tr td:first-child {
+    color: #666;
+    font-size: 11px;
+  }
+  .totals-inner table tr td:last-child {
+    text-align: right;
+  }
+  .totals-inner .grand-total td {
+    background: #555;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* Bottom section */
+  .bottom-section {
+    display: flex;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .bank-box, .notes-box {
+    flex: 1;
+    border: 1px solid #bbb;
+  }
+  .box-header {
+    background: #555;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .box-body {
+    padding: 10px 12px;
+    font-size: 11px;
+    line-height: 1.9;
+    color: #444;
+    background: #f0f0ee;
+  }
+
+  .stamp-area {
+    margin-top: 16px;
+    text-align: right;
+    font-size: 10px;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header-section">
+    <div class="header-left">
+      <div class="doc-title">請求書</div>
+      <div class="doc-subtitle">INVOICE / 北九州精密工業株式会社</div>
+    </div>
+    <div class="header-right">
+      <div class="vendor-name">北九州精密工業株式会社</div>
+      <div class="vendor-detail">
+        〒803-0812　福岡県北九州市小倉北区中島二丁目10番3号<br>
+        TEL: 093-521-4400<br>
+        適格請求書発行事業者登録番号：T4000098765432
+      </div>
+    </div>
+  </div>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div class="info-cell">
+      <div class="ic-label">請求書番号</div>
+      <div class="ic-value">2026-KYU-00183</div>
+    </div>
+    <div class="info-cell">
+      <div class="ic-label">発行日</div>
+      <div class="ic-value">2026/03/17</div>
+    </div>
+    <div class="info-cell">
+      <div class="ic-label">支払期限</div>
+      <div class="ic-value due">2026/04/20</div>
+    </div>
+  </div>
+
+  <!-- Client + total -->
+  <div class="client-section">
+    <div class="client-info">
+      <div class="label">請求先</div>
+      <div class="name">株式会社キュウシュウテクノパーツ　御中</div>
+      <div class="address">〒812-0011　福岡県福岡市博多区博多駅前二丁目8番22号 博多ビジネスセンター3階</div>
+    </div>
+    <div class="total-summary">
+      <div class="ts-label">ご請求金額（税込）</div>
+      <div class="ts-amount">¥1,015,300</div>
+      <div class="ts-tax">消費税 ¥92,300 を含む</div>
+    </div>
+  </div>
+
+  <!-- Items table -->
+  <div class="section-label">明　細</div>
+  <table class="items-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>品目・摘要</th>
+        <th>数量</th>
+        <th>単位</th>
+        <th>単価</th>
+        <th>金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="no">1</td>
+        <td class="item-name">プレス用金型製作（型番：KM-2026-A）</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="price">—</td>
+        <td class="amount">¥280,000</td>
+      </tr>
+      <tr>
+        <td class="no">2</td>
+        <td class="item-name">アルミ部品加工（Aシリーズ　品番A-101）</td>
+        <td class="num">200</td>
+        <td class="unit">個</td>
+        <td class="price">¥850</td>
+        <td class="amount">¥170,000</td>
+      </tr>
+      <tr>
+        <td class="no">3</td>
+        <td class="item-name">ステンレス部品加工（Bシリーズ　品番B-205）</td>
+        <td class="num">150</td>
+        <td class="unit">個</td>
+        <td class="price">¥1,200</td>
+        <td class="amount">¥180,000</td>
+      </tr>
+      <tr>
+        <td class="no">4</td>
+        <td class="item-name">表面処理（アルマイト加工）</td>
+        <td class="num">350</td>
+        <td class="unit">個</td>
+        <td class="price">¥320</td>
+        <td class="amount">¥112,000</td>
+      </tr>
+      <tr>
+        <td class="no">5</td>
+        <td class="item-name">品質検査・検査報告書作成</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="price">—</td>
+        <td class="amount">¥45,000</td>
+      </tr>
+      <tr>
+        <td class="no">6</td>
+        <td class="item-name">梱包・出荷作業費</td>
+        <td class="num">1</td>
+        <td class="unit">式</td>
+        <td class="price">—</td>
+        <td class="amount">¥28,000</td>
+      </tr>
+      <tr>
+        <td class="no">7</td>
+        <td class="item-name">材料費（アルミ合金A5052）</td>
+        <td class="num">120</td>
+        <td class="unit">kg</td>
+        <td class="price">¥650</td>
+        <td class="amount">¥78,000</td>
+      </tr>
+      <tr>
+        <td class="no">8</td>
+        <td class="item-name">設計変更対応費</td>
+        <td class="num">2</td>
+        <td class="unit">時間</td>
+        <td class="price">¥15,000</td>
+        <td class="amount">¥30,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-row">
+    <div class="totals-inner">
+      <table>
+        <tr>
+          <td>小計</td>
+          <td>¥923,000</td>
+        </tr>
+        <tr>
+          <td>消費税（10%）</td>
+          <td>¥92,300</td>
+        </tr>
+        <tr class="grand-total">
+          <td>合計金額</td>
+          <td>¥1,015,300</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="bank-box">
+      <div class="box-header">振込先口座</div>
+      <div class="box-body">
+        福岡銀行　小倉支店<br>
+        普通預金　口座番号：7654321<br>
+        口座名義：キタキュウシュウセイミツコウギョウ（カ
+      </div>
+    </div>
+    <div class="notes-box">
+      <div class="box-header">備考</div>
+      <div class="box-body">
+        納品書・検査成績書は別途郵送いたします。支払期日を厳守くださいますようお願い申し上げます。
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-area">
+    本請求書に関するお問い合わせ：北九州精密工業株式会社　TEL 093-521-4400
+  </div>
+
+</div>
+</body>
+</html>

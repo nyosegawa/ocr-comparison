@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=794px">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<title>請求書 R8-0317-001</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 794px;
+    margin: 0;
+    background: #faf7f2;
+    color: #3d2b1f;
+    font-size: 13px;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    padding: 50px 52px 40px 52px;
+    background: #faf7f2;
+  }
+
+  /* Outer border: double */
+  .outer-border {
+    border: 3px double #8b6344;
+    padding: 32px 36px;
+    min-height: 1020px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header: right-aligned */
+  .header {
+    text-align: right;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #c9a882;
+  }
+  .header .doc-label {
+    font-size: 11px;
+    color: #9a7355;
+    letter-spacing: 0.2em;
+    margin-bottom: 4px;
+  }
+  .header .doc-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5c3a1e;
+    letter-spacing: 0.3em;
+    line-height: 1;
+  }
+  .header .doc-number {
+    font-size: 11px;
+    color: #9a7355;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Vendor: right side */
+  .vendor-section {
+    text-align: right;
+    margin-bottom: 24px;
+  }
+  .vendor-section .vendor-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3d2b1f;
+  }
+  .vendor-section .vendor-address {
+    font-size: 11px;
+    color: #7a5c42;
+    line-height: 1.8;
+    margin-top: 4px;
+  }
+  .vendor-section .vendor-reg {
+    font-size: 10px;
+    color: #9a7355;
+    margin-top: 2px;
+  }
+
+  /* Divider ornament */
+  .ornament-divider {
+    text-align: center;
+    color: #c9a882;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.3em;
+  }
+
+  /* Meta info: minimal horizontal list */
+  .meta-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    background: #f0e8db;
+    border: 1px solid #c9a882;
+    padding: 12px 20px;
+  }
+  .meta-item .mi-label {
+    font-size: 10px;
+    color: #9a7355;
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+  }
+  .meta-item .mi-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3d2b1f;
+  }
+
+  /* Client block */
+  .client-section {
+    margin-bottom: 22px;
+  }
+  .client-section .client-label {
+    font-size: 10px;
+    color: #9a7355;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .client-section .client-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3d2b1f;
+    border-bottom: 1.5px solid #8b6344;
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+  .client-section .client-address {
+    font-size: 11px;
+    color: #7a5c42;
+    margin-top: 5px;
+    line-height: 1.6;
+  }
+  .client-section .request-note {
+    font-size: 12px;
+    color: #5c3a1e;
+    margin-top: 8px;
+  }
+
+  /* Items table: minimal */
+  .items-section {
+    margin-bottom: 0;
+    flex: 1;
+  }
+  .items-section .section-heading {
+    font-size: 11px;
+    color: #9a7355;
+    letter-spacing: 0.2em;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #c9a882;
+    padding-bottom: 4px;
+  }
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .items-table thead tr {
+    border-bottom: 1.5px solid #8b6344;
+  }
+  .items-table thead th {
+    padding: 7px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #5c3a1e;
+    text-align: center;
+    background: transparent;
+    letter-spacing: 0.05em;
+  }
+  .items-table thead th.left { text-align: left; }
+  .items-table tbody tr {
+    border-bottom: 1px solid #e0d2c0;
+  }
+  .items-table tbody tr:last-child {
+    border-bottom: 1.5px solid #8b6344;
+  }
+  .items-table tbody td {
+    padding: 9px 8px;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #3d2b1f;
+  }
+  .items-table td.no {
+    text-align: center;
+    width: 30px;
+    font-size: 10px;
+    color: #b09070;
+    font-weight: 300;
+  }
+  .items-table td.item-name { text-align: left; }
+  .items-table td.qty { text-align: right; width: 50px; }
+  .items-table td.unit { text-align: center; width: 40px; font-size: 11px; color: #7a5c42; }
+  .items-table td.price { text-align: right; width: 82px; font-size: 11px; color: #7a5c42; }
+  .items-table td.amount { text-align: right; width: 88px; font-weight: 700; }
+
+  /* Totals */
+  .totals-section {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+  .totals-table {
+    width: 260px;
+    border-collapse: collapse;
+  }
+  .totals-table tr td {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #e0d2c0;
+  }
+  .totals-table tr:last-child td { border-bottom: none; }
+  .totals-table tr td:first-child {
+    color: #9a7355;
+    font-size: 11px;
+  }
+  .totals-table tr td:last-child {
+    text-align: right;
+  }
+  .totals-table .grand-total td {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5c3a1e;
+    border-top: 1.5px solid #8b6344;
+    padding-top: 10px;
+  }
+
+  /* Grand total box */
+  .grand-box {
+    text-align: center;
+    border: 2px solid #8b6344;
+    padding: 14px 20px;
+    background: #f0e8db;
+    margin-bottom: 20px;
+  }
+  .grand-box .gb-label {
+    font-size: 11px;
+    color: #9a7355;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .grand-box .gb-amount {
+    font-size: 26px;
+    font-weight: 700;
+    color: #5c3a1e;
+    letter-spacing: 0.05em;
+  }
+  .grand-box .gb-note {
+    font-size: 10px;
+    color: #9a7355;
+    margin-top: 3px;
+  }
+
+  /* Bank / Notes */
+  .footer-section {
+    margin-top: auto;
+    border-top: 1px solid #c9a882;
+    padding-top: 16px;
+    display: flex;
+    gap: 20px;
+  }
+  .footer-col {
+    flex: 1;
+  }
+  .footer-col .fc-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #9a7355;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e0d2c0;
+    padding-bottom: 4px;
+  }
+  .footer-col .fc-content {
+    font-size: 11px;
+    color: #5c3a1e;
+    line-height: 1.9;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<div class="outer-border">
+
+  <!-- Header (right-aligned) -->
+  <div class="header">
+    <div class="doc-label">INVOICE</div>
+    <div class="doc-title">請 求 書</div>
+    <div class="doc-number">第 R8-0317-001 号</div>
+  </div>
+
+  <!-- Vendor (right-aligned) -->
+  <div class="vendor-section">
+    <div class="vendor-name">北海道クリーン建設有限会社</div>
+    <div class="vendor-address">
+      〒003-0828　北海道札幌市白石区菊水八条二丁目3番15号<br>
+      TEL: 011-867-2233
+    </div>
+    <div class="vendor-reg">適格請求書発行事業者登録番号：T1000056789012</div>
+  </div>
+
+  <div class="ornament-divider">── ✦ ──</div>
+
+  <!-- Meta info -->
+  <div class="meta-info">
+    <div class="meta-item">
+      <div class="mi-label">発 行 日</div>
+      <div class="mi-value">令和8年3月17日</div>
+    </div>
+    <div class="meta-item">
+      <div class="mi-label">支払期限</div>
+      <div class="mi-value">令和8年3月31日</div>
+    </div>
+    <div class="meta-item">
+      <div class="mi-label">請求書番号</div>
+      <div class="mi-value">R8-0317-001</div>
+    </div>
+  </div>
+
+  <!-- Client -->
+  <div class="client-section">
+    <div class="client-label">請 求 先</div>
+    <div class="client-name">株式会社サッポロ不動産管理　御中</div>
+    <div class="client-address">〒060-0002　北海道札幌市中央区北二条西四丁目1番地 札幌センタービル5階</div>
+    <div class="request-note">下記のとおりご請求申し上げます。</div>
+  </div>
+
+  <!-- Items -->
+  <div class="items-section">
+    <div class="section-heading">明　　細</div>
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th class="left">品目・内容</th>
+          <th>数量</th>
+          <th>単位</th>
+          <th>単価</th>
+          <th>金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="no">1</td>
+          <td class="item-name">解体後現場清掃作業</td>
+          <td class="qty">1</td>
+          <td class="unit">式</td>
+          <td class="price">—</td>
+          <td class="amount">¥4,500</td>
+        </tr>
+        <tr>
+          <td class="no">2</td>
+          <td class="item-name">廃材運搬・処理費</td>
+          <td class="qty">1</td>
+          <td class="unit">式</td>
+          <td class="price">—</td>
+          <td class="amount">¥3,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Totals -->
+  <div class="totals-section">
+    <table class="totals-table">
+      <tr>
+        <td>小計</td>
+        <td>¥8,000</td>
+      </tr>
+      <tr>
+        <td>消費税（10%）</td>
+        <td>¥800</td>
+      </tr>
+      <tr class="grand-total">
+        <td>合計金額</td>
+        <td>¥8,800</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Grand total highlight -->
+  <div class="grand-box">
+    <div class="gb-label">ご請求金額（税込）</div>
+    <div class="gb-amount">¥8,800</div>
+    <div class="gb-note">消費税（10%）¥800 を含みます</div>
+  </div>
+
+  <!-- Footer: bank + notes -->
+  <div class="footer-section">
+    <div class="footer-col">
+      <div class="fc-title">お振込先口座</div>
+      <div class="fc-content">
+        北洋銀行　白石支店<br>
+        普通預金　口座番号：3456789<br>
+        口座名義：ホッカイドウクリーンケンセツ（ユ
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="fc-title">備考・注意事項</div>
+      <div class="fc-content">
+        工事完了確認後、速やかにお振込みいただけますと幸いです。領収書は振込確認後に発行いたします。
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
