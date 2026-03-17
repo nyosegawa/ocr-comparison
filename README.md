@@ -2,7 +2,7 @@
 
 日本語手書き OCR モデルの比較評価フレームワーク。
 
-API ベースの商用モデルから OSS の GPU モデルまで 19 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
+API ベースの商用モデルから OSS の GPU モデルまで 20 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
 
 ## 対応モデル
 
@@ -18,6 +18,7 @@ API ベースの商用モデルから OSS の GPU モデルまで 19 以上の O
 | GPT-5.4 | `gpt-5.4` | Reasoning effort: high |
 | Google Cloud Vision | `google-cloud-vision` | |
 | Azure AI Vision | `azure-vision` | |
+| Mistral OCR | `mistral-ocr-latest` | mistral-ocr-latest |
 
 ### Modal GPU モデル（[Modal](https://modal.com) 上で実行）
 
@@ -54,12 +55,13 @@ API ベースの商用モデルから OSS の GPU モデルまで 19 以上の O
 | 11 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
 | 12 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
 | 13 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
-| 14 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
-| 15 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
-| 16 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
-| 17 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
-| 18 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
-| 19 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
+| 14 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
+| 15 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
+| 16 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
+| 17 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
+| 18 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
+| 19 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
+| 20 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
 
 ## 評価指標
 
