@@ -45,7 +45,8 @@ evaluation/results/
 .modal/
 
 # Claude Code
-.claude/
+.claude/*
+!.claude/skills/
 
 # External reference documents
 reference_docs/
