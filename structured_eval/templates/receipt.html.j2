@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 300px;
+    padding: 20px 16px;
+    background: #fff;
+    color: #222;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .store-name { text-align: center; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .store-info { text-align: center; font-size: 9px; margin-bottom: 8px; color: #555; }
+  .registration { text-align: center; font-size: 8px; color: #888; margin-bottom: 8px; }
+  h2 { text-align: center; font-size: 16px; letter-spacing: 6px; margin: 12px 0; border-top: 1px dashed #999; border-bottom: 1px dashed #999; padding: 6px 0; }
+  .meta { margin-bottom: 8px; }
+  .meta div { display: flex; justify-content: space-between; }
+  .divider { border-top: 1px dashed #999; margin: 8px 0; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
+  th { text-align: left; font-weight: 400; border-bottom: 1px solid #ccc; padding: 2px 0; font-size: 9px; color: #666; }
+  td { padding: 2px 0; }
+  td.num { text-align: right; }
+  .totals { margin-top: 4px; }
+  .totals div { display: flex; justify-content: space-between; padding: 2px 0; }
+  .total-line { font-size: 14px; font-weight: 700; border-top: 2px solid #222; padding-top: 4px; margin-top: 4px; }
+  .tax-detail { font-size: 9px; color: #555; margin-top: 4px; }
+  .tax-detail div { display: flex; justify-content: space-between; }
+  .payment { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #999; }
+  .notes { margin-top: 8px; font-size: 9px; color: #555; }
+  .footer { margin-top: 16px; text-align: center; font-size: 8px; color: #999; }
+</style>
+</head>
+<body>
+  <div class="store-name">{{ store_name }}</div>
+  <div class="store-info">
+    {% if store_address %}{{ store_address }}<br>{% endif %}
+    {% if store_phone %}TEL: {{ store_phone }}{% endif %}
+  </div>
+  {% if store_registration_number %}
+  <div class="registration">登録番号: {{ store_registration_number }}</div>
+  {% endif %}
+
+  <h2>領 収 書</h2>
+
+  <div class="meta">
+    {% if receipt_number %}<div><span>No.</span><span>{{ receipt_number }}</span></div>{% endif %}
+    {% if issue_date %}<div><span>日付</span><span>{{ issue_date }}</span></div>{% endif %}
+    {% if client_name %}<div><span>宛名</span><span>{{ client_name }} 様</span></div>{% endif %}
+  </div>
+
+  <div class="divider"></div>
+
+  <table>
+    <thead>
+      <tr><th>品目</th><th style="text-align:right;width:40px;">数量</th><th style="text-align:right;width:60px;">金額</th></tr>
+    </thead>
+    <tbody>
+      {% for item in line_items %}
+      <tr>
+        <td>{{ item.description }}</td>
+        <td class="num">{{ item.quantity if item.quantity is not none else '1' }}</td>
+        <td class="num">¥{{ "{:,.0f}".format(item.amount) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <div class="totals">
+    {% if subtotal is not none %}
+    <div><span>小計</span><span>¥{{ "{:,.0f}".format(subtotal) }}</span></div>
+    {% endif %}
+    <div class="total-line"><span>合計</span><span>¥{{ "{:,.0f}".format(total_amount) }}</span></div>
+  </div>
+
+  <div class="tax-detail">
+    {% if tax_rate_8 is not none %}
+    <div><span>8%対象</span><span>¥{{ "{:,.0f}".format(tax_rate_8) }} (税: ¥{{ "{:,.0f}".format(tax_amount_8 or 0) }})</span></div>
+    {% endif %}
+    {% if tax_rate_10 is not none %}
+    <div><span>10%対象</span><span>¥{{ "{:,.0f}".format(tax_rate_10) }} (税: ¥{{ "{:,.0f}".format(tax_amount_10 or 0) }})</span></div>
+    {% endif %}
+  </div>
+
+  {% if payment_method %}
+  <div class="payment">
+    <div><span>お支払い</span><span>{{ payment_method }}</span></div>
+  </div>
+  {% endif %}
+
+  {% if notes %}
+  <div class="notes">但し: {{ notes }}</div>
+  {% endif %}
+
+  <div class="footer">
+    <div>上記の金額を領収いたしました</div>
+  </div>
+</body>
+</html>

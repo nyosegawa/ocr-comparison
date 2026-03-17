@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 346px; height: 210px;
+    background: #fff;
+    color: #222;
+    font-size: 8px;
+    line-height: 1.4;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .top { }
+  .company-name { font-size: 10px; font-weight: 700; color: #333; }
+  .company-name-en { font-size: 7px; color: #888; letter-spacing: 1px; }
+  .department { font-size: 8px; color: #555; margin-top: 4px; }
+  .title { font-size: 8px; color: #555; }
+  .name-section { margin: 10px 0 6px 0; }
+  .name-reading { font-size: 7px; color: #888; letter-spacing: 2px; }
+  .person-name { font-size: 16px; font-weight: 700; letter-spacing: 4px; }
+  .bottom { font-size: 7.5px; color: #444; }
+  .contact-row { display: flex; gap: 4px; margin-bottom: 2px; }
+  .contact-label { color: #888; width: 28px; flex-shrink: 0; }
+  .address { margin-bottom: 4px; }
+  .postal { color: #888; }
+</style>
+</head>
+<body>
+  <div class="top">
+    {% if company_name %}
+    <div class="company-name">{{ company_name }}</div>
+    {% endif %}
+    {% if company_name_en %}
+    <div class="company-name-en">{{ company_name_en }}</div>
+    {% endif %}
+    {% if department %}
+    <div class="department">{{ department }}</div>
+    {% endif %}
+    {% if title %}
+    <div class="title">{{ title }}</div>
+    {% endif %}
+  </div>
+
+  <div class="name-section">
+    {% if person_name_reading %}
+    <div class="name-reading">{{ person_name_reading }}</div>
+    {% endif %}
+    <div class="person-name">{{ person_name }}</div>
+  </div>
+
+  <div class="bottom">
+    {% if address %}
+    <div class="address">
+      {% if postal_code %}<span class="postal">〒{{ postal_code }}</span> {% endif %}
+      {{ address }}
+    </div>
+    {% endif %}
+    {% if phone %}
+    <div class="contact-row"><span class="contact-label">TEL</span><span>{{ phone }}</span></div>
+    {% endif %}
+    {% if fax %}
+    <div class="contact-row"><span class="contact-label">FAX</span><span>{{ fax }}</span></div>
+    {% endif %}
+    {% if mobile %}
+    <div class="contact-row"><span class="contact-label">携帯</span><span>{{ mobile }}</span></div>
+    {% endif %}
+    {% if email %}
+    <div class="contact-row"><span class="contact-label">Mail</span><span>{{ email }}</span></div>
+    {% endif %}
+    {% if website %}
+    <div class="contact-row"><span class="contact-label">Web</span><span>{{ website }}</span></div>
+    {% endif %}
+  </div>
+</body>
+</html>

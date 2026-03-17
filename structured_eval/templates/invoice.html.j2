@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 794px; height: 1123px;
+    padding: 60px;
+    background: #fff;
+    color: #222;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  h1 { text-align: center; font-size: 24px; margin-bottom: 30px; letter-spacing: 8px; }
+  .header { display: flex; justify-content: space-between; margin-bottom: 30px; }
+  .client-section { flex: 1; }
+  .client-name { font-size: 16px; font-weight: 700; border-bottom: 2px solid #222; padding-bottom: 4px; display: inline-block; }
+  .vendor-section { text-align: right; flex: 1; }
+  .vendor-name { font-size: 14px; font-weight: 700; }
+  .meta-table { width: 100%; margin-bottom: 20px; }
+  .meta-table td { padding: 4px 8px; }
+  .meta-table .label { font-weight: 700; width: 120px; background: #f5f5f5; }
+  table.items { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  table.items th { background: #333; color: #fff; padding: 6px 8px; font-weight: 700; text-align: center; font-size: 11px; }
+  table.items td { border: 1px solid #ccc; padding: 6px 8px; }
+  table.items td.num { text-align: right; }
+  .totals { width: 300px; margin-left: auto; margin-bottom: 30px; }
+  .totals td { padding: 4px 8px; }
+  .totals td.num { text-align: right; font-weight: 700; }
+  .totals .total-row td { border-top: 2px solid #222; font-size: 14px; font-weight: 700; }
+  .bank-info { border: 1px solid #ccc; padding: 12px; margin-bottom: 20px; }
+  .bank-info h3 { font-size: 12px; margin-bottom: 8px; }
+  .registration { font-size: 10px; color: #666; }
+  .notes { margin-top: 20px; padding: 12px; background: #fafafa; border: 1px solid #eee; }
+  .notes h3 { font-size: 12px; margin-bottom: 4px; }
+  .stamp-area { width: 80px; height: 80px; border: 1px solid #ccc; margin-left: auto; margin-top: -80px; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 10px; }
+</style>
+</head>
+<body>
+  <h1>請 求 書</h1>
+
+  <div class="header">
+    <div class="client-section">
+      {% if client_name %}
+      <div class="client-name">{{ client_name }} 御中</div>
+      {% endif %}
+      {% if client_address %}
+      <div style="margin-top: 8px;">{{ client_address }}</div>
+      {% endif %}
+      <div style="margin-top: 16px;">下記の通りご請求申し上げます。</div>
+      <div style="margin-top: 8px; font-size: 18px; font-weight: 700; border: 2px solid #222; padding: 8px; display: inline-block;">
+        ご請求金額: ¥{{ "{:,.0f}".format(total_amount) }}-
+      </div>
+    </div>
+    <div class="vendor-section">
+      <div class="vendor-name">{{ vendor_name }}</div>
+      {% if vendor_address %}<div>{{ vendor_address }}</div>{% endif %}
+      {% if vendor_phone %}<div>TEL: {{ vendor_phone }}</div>{% endif %}
+      {% if vendor_registration_number %}
+      <div class="registration">登録番号: {{ vendor_registration_number }}</div>
+      {% endif %}
+      <div class="stamp-area">印</div>
+    </div>
+  </div>
+
+  <table class="meta-table">
+    <tr>
+      <td class="label">請求書番号</td><td>{{ invoice_number or '' }}</td>
+      <td class="label">発行日</td><td>{{ issue_date or '' }}</td>
+    </tr>
+    <tr>
+      <td class="label">支払期限</td><td>{{ due_date or '' }}</td>
+      <td></td><td></td>
+    </tr>
+  </table>
+
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:40px;">No.</th>
+        <th>品目・内容</th>
+        <th style="width:60px;">数量</th>
+        <th style="width:50px;">単位</th>
+        <th style="width:90px;">単価</th>
+        <th style="width:100px;">金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in line_items %}
+      <tr>
+        <td class="num">{{ loop.index }}</td>
+        <td>{{ item.description }}</td>
+        <td class="num">{{ item.quantity if item.quantity is not none else '' }}</td>
+        <td style="text-align:center;">{{ item.unit or '' }}</td>
+        <td class="num">{{ "{:,.0f}".format(item.unit_price) if item.unit_price is not none else '' }}</td>
+        <td class="num">¥{{ "{:,.0f}".format(item.amount) }}</td>
+      </tr>
+      {% endfor %}
+      {% for _ in range(max(0, 8 - line_items|length)) %}
+      <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <table class="totals">
+    <tr><td>小計</td><td class="num">¥{{ "{:,.0f}".format(subtotal) if subtotal is not none else '' }}</td></tr>
+    <tr><td>消費税（{{ "{:.0%}".format(tax_rate) if tax_rate is not none else '' }}）</td><td class="num">¥{{ "{:,.0f}".format(tax_amount) if tax_amount is not none else '' }}</td></tr>
+    <tr class="total-row"><td>合計</td><td class="num">¥{{ "{:,.0f}".format(total_amount) }}</td></tr>
+  </table>
+
+  {% if bank_name %}
+  <div class="bank-info">
+    <h3>お振込先</h3>
+    <div>{{ bank_name }}　{{ bank_branch or '' }}</div>
+    <div>{{ bank_account_type or '' }}　{{ bank_account_number or '' }}</div>
+    {% if bank_account_holder %}<div>口座名義: {{ bank_account_holder }}</div>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if notes %}
+  <div class="notes">
+    <h3>備考</h3>
+    <div>{{ notes }}</div>
+  </div>
+  {% endif %}
+</body>
+</html>
