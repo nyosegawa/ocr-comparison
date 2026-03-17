@@ -20,6 +20,7 @@ from .modal_runner import (
     PaddleOCRModal,
     YomiTokuModal,
 )
+from .mistral_ocr import MistralOCR
 from .openai_gpt import GPTOCR
 
 
@@ -41,6 +42,7 @@ def get_all_models() -> list[OCRModel]:
         GPTOCR(),
         GoogleCloudVisionOCR(),
         AzureVisionOCR(),
+        MistralOCR(),
         # --- Modal models (GPU execution) ---
         HunyuanOCRModal(),
         DeepSeekOCRModal(),
