@@ -179,6 +179,57 @@ cd evaluation/viewer && npx vitest run
 cd annotation && npx vitest run
 ```
 
+## 構造化抽出評価 (structured_eval)
+
+活字ビジネス文書（請求書・レシート・名刺）から構造化 JSON を抽出するタスクの評価フレームワークです。詳細は[ブログ記事](https://nyosegawa.github.io/posts/structured-ocr-evaluation/)を参照してください。
+
+### 評価結果（合成データ 30 枚）
+
+| Rank | モデル | Accuracy | Parse | Schema | Avg Time |
+|------|--------|----------|-------|--------|----------|
+| 1 | claude-4.6-opus | 0.9931 | 100% | 100% | 10.4s |
+| 2 | gemini-3-flash-preview | 0.9925 | 100% | 100% | 9.9s |
+| 3 | gemini-3.1-pro-preview | 0.9909 | 100% | 100% | 19.4s |
+| 4 | gpt-5.4 | 0.9900 | 100% | 100% | 6.9s |
+| 5 | claude-4.5-sonnet | 0.9733 | 100% | 100% | 10.0s |
+
+### 使い方
+
+```bash
+cd structured_eval
+
+# 環境変数を設定
+cp .env.example .env  # ANTHROPIC_API_KEY, GOOGLE_API_KEY, OPENAI_API_KEY
+
+# 利用可能なモデル一覧
+uv run python -m src.evaluate list-models
+
+# 全モデルで評価
+uv run python -m src.evaluate run
+
+# 特定モデルのみ
+uv run python -m src.evaluate run --models claude-4.6-opus gpt-5.4
+
+# 特定の文書タイプのみ
+uv run python -m src.evaluate run --types invoice receipt
+
+# 結果の確認
+uv run python -m src.evaluate inspect
+
+# 指標の再計算
+uv run python -m src.evaluate rescore
+```
+
+### データセット生成
+
+Agent Skill `generate-business-doc` で合成データを生成できます。
+
+```bash
+# Claude Code で実行
+/generate-business-doc              # 各タイプ 3 枚ずつ
+/generate-business-doc invoice 5    # 請求書を 5 枚
+```
+
 ## ライセンス
 
 MIT License - 詳細は [LICENSE](LICENSE) を参照してください。
