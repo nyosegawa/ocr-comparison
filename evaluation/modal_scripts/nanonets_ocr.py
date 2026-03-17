@@ -2,9 +2,12 @@
 
 import modal
 
-from _common import OCR_PROMPT_JA
-
 app = modal.App("ocr-eval-nanonets")
+
+OCR_PROMPT_JA = (
+    "この画像に書かれているテキストを正確に読み取ってください。"
+    "テキストのみを出力してください。余計な説明は不要です。"
+)
 
 image = (
     modal.Image.debian_slim(python_version="3.11")

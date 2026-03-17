@@ -1,0 +1,86 @@
+"""GLM-OCR on Modal (0.9B params, CogViT + GLM-0.5B).
+
+Uses transformers directly (not vLLM) because glm_ocr architecture
+requires trust_remote_code and is not yet natively supported in vLLM.
+"""
+
+import modal
+
+app = modal.App("ocr-eval-glm-ocr")
+
+OCR_PROMPT_JA = (
+    "この画像に書かれているテキストを正確に読み取ってください。"
+    "テキストのみを出力してください。余計な説明は不要です。"
+)
+
+image = (
+    modal.Image.debian_slim(python_version="3.11")
+    .apt_install("git")
+    .pip_install(
+        "torch",
+        "torchvision",
+        "Pillow",
+        "accelerate",
+    )
+    .pip_install("transformers @ git+https://github.com/huggingface/transformers.git")
+)
+
+
+@app.function(gpu="T4", image=image, timeout=1800)
+def run_ocr(images_b64: list[str]) -> list[str]:
+    import base64
+    import io
+
+    import torch
+    from PIL import Image
+    from transformers import AutoModelForImageTextToText, AutoProcessor
+
+    model_id = "zai-org/GLM-OCR"
+    processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
+    model = AutoModelForImageTextToText.from_pretrained(
+        model_id,
+        torch_dtype=torch.float16,
+        device_map="auto",
+        trust_remote_code=True,
+    )
+
+    results = []
+
+    for b64 in images_b64:
+        img_bytes = base64.b64decode(b64)
+        img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": img},
+                    {"type": "text", "text": OCR_PROMPT_JA},
+                ],
+            },
+        ]
+        inputs = processor.apply_chat_template(
+            messages,
+            tokenize=True,
+            add_generation_prompt=True,
+            return_dict=True,
+            return_tensors="pt",
+        ).to(model.device)
+
+        generated_ids = model.generate(**inputs, max_new_tokens=8192)
+        output_text = processor.decode(
+            generated_ids[0][inputs["input_ids"].shape[-1] :],
+            skip_special_tokens=True,
+        )
+        results.append(output_text.strip())
+
+    return results
+
+
+@app.local_entrypoint()
+def main(input: str, output: str):
+    from _common import load_input, save_output
+
+    data = load_input(input)
+    results = run_ocr.remote(data["images"])
+    save_output(output, results)

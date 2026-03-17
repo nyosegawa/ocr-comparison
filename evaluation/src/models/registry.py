@@ -10,6 +10,7 @@ from .google_cloud_vision import GoogleCloudVisionOCR
 from .modal_runner import (
     ChandraOCRModal,
     DeepSeekOCRModal,
+    GLMOCRModal,
     GOTOCRModal,
     HunyuanOCRModal,
     NanonetsOCRModal,
@@ -51,6 +52,7 @@ def get_all_models() -> list[OCRModel]:
         YomiTokuModal(),
         NDLOCRLiteModal(),
         NDLOCRv2Modal(),
+        GLMOCRModal(),
     ]
 
 

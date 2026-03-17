@@ -154,3 +154,11 @@ class NDLOCRv2Modal(ModalOCRModel):
     gpu = "A10G"
     weights_url = "https://github.com/ndl-lab/ndlocr_cli"
     license = "CC-BY-4.0"
+
+
+class GLMOCRModal(ModalOCRModel):
+    name = "glm-ocr"
+    script_name = "glm_ocr.py"
+    gpu = "T4"
+    weights_url = "https://huggingface.co/zai-org/GLM-OCR"
+    license = "MIT"
