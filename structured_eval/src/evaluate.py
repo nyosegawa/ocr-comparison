@@ -142,6 +142,8 @@ async def evaluate_model_on_document(
         field_scores=field_scores,
         mean_field_accuracy=mean_acc,
         elapsed_sec=elapsed,
+        raw_response=result.raw_response,
+        parsed_json=parsed,
     )
 
 

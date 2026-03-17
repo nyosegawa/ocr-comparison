@@ -19,9 +19,11 @@ class DocumentResult:
     mean_field_accuracy: float = 0.0
     elapsed_sec: float = 0.0
     error: str | None = None
+    raw_response: str = ""
+    parsed_json: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        d: dict[str, Any] = {
             "document_id": self.document_id,
             "document_type": self.document_type,
             "parse_success": self.parse_success,
@@ -32,6 +34,11 @@ class DocumentResult:
             "elapsed_sec": round(self.elapsed_sec, 3),
             "error": self.error,
         }
+        if self.raw_response:
+            d["raw_response"] = self.raw_response
+        if self.parsed_json is not None:
+            d["parsed_json"] = self.parsed_json
+        return d
 
 
 @dataclass
