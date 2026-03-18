@@ -22,6 +22,7 @@ from .modal_runner import (
 )
 from .mistral_ocr import MistralOCR
 from .openai_gpt import GPTOCR
+from .qwen_vl_ocr import QwenVLOCR
 
 
 def get_all_models() -> list[OCRModel]:
@@ -43,6 +44,7 @@ def get_all_models() -> list[OCRModel]:
         GoogleCloudVisionOCR(),
         AzureVisionOCR(),
         MistralOCR(),
+        QwenVLOCR(),
         # --- Modal models (GPU execution) ---
         HunyuanOCRModal(),
         DeepSeekOCRModal(),
