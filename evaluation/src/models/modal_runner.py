@@ -169,4 +169,4 @@ class SarashinaOCRModal(ModalOCRModel):
     script_name = "sarashina_ocr.py"
     gpu = "L4"
     weights_url = "https://huggingface.co/sbintuitions/sarashina2.2-ocr"
-    license = None
+    license = "MIT"
