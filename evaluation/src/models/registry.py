@@ -18,6 +18,7 @@ from .modal_runner import (
     NDLOCRv2Modal,
     OlmOCRModal,
     PaddleOCRModal,
+    SarashinaOCRModal,
     YomiTokuModal,
 )
 from .mistral_ocr import MistralOCR
@@ -57,6 +58,7 @@ def get_all_models() -> list[OCRModel]:
         NDLOCRLiteModal(),
         NDLOCRv2Modal(),
         GLMOCRModal(),
+        SarashinaOCRModal(),
     ]
 
 

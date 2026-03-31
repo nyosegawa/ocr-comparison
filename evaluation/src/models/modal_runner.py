@@ -162,3 +162,11 @@ class GLMOCRModal(ModalOCRModel):
     gpu = "T4"
     weights_url = "https://huggingface.co/zai-org/GLM-OCR"
     license = "MIT"
+
+
+class SarashinaOCRModal(ModalOCRModel):
+    name = "sarashina-2.2-ocr"
+    script_name = "sarashina_ocr.py"
+    gpu = "L4"
+    weights_url = "https://huggingface.co/sbintuitions/sarashina2.2-ocr"
+    license = None
