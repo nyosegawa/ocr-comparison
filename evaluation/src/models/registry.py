@@ -16,6 +16,7 @@ from .modal_runner import (
     NanonetsOCRModal,
     NDLOCRLiteModal,
     NDLOCRv2Modal,
+    NemotronOCRModal,
     OlmOCRModal,
     PaddleOCRModal,
     SarashinaOCRModal,
@@ -59,6 +60,7 @@ def get_all_models() -> list[OCRModel]:
         NDLOCRv2Modal(),
         GLMOCRModal(),
         SarashinaOCRModal(),
+        NemotronOCRModal(),
     ]
 
 

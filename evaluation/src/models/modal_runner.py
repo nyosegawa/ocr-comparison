@@ -170,3 +170,11 @@ class SarashinaOCRModal(ModalOCRModel):
     gpu = "L4"
     weights_url = "https://huggingface.co/sbintuitions/sarashina2.2-ocr"
     license = "MIT"
+
+
+class NemotronOCRModal(ModalOCRModel):
+    name = "nemotron-ocr-v2"
+    script_name = "nemotron_ocr_run.py"
+    gpu = "L4"
+    weights_url = "https://huggingface.co/nvidia/nemotron-ocr-v2"
+    license = "NVIDIA Open Model License"
