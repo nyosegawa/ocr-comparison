@@ -9,7 +9,7 @@ image = (
     .apt_install("git", "git-lfs")
     .run_commands(
         "git lfs install"
-        " && git clone https://github.com/ndl-lab/ndlocr-lite.git /opt/ndlocr-lite"
+        " && git clone --branch 1.2.1 --depth 1 https://github.com/ndl-lab/ndlocr-lite.git /opt/ndlocr-lite"
         " && cd /opt/ndlocr-lite && pip install .",
     )
 )

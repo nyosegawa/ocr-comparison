@@ -8,7 +8,7 @@ image = (
     modal.Image.debian_slim(python_version="3.11")
     .apt_install("libgl1-mesa-glx", "libglib2.0-0")
     .pip_install(
-        "yomitoku>=0.10",
+        "yomitoku>=0.13.0",
         "torch>=2.6.0",
         "torchvision>=0.21.0",
         "Pillow",

@@ -54,9 +54,9 @@ API ベースの商用モデルから OSS の GPU モデルまで 26 以上の O
 | 4 | Gemini 3.1 Flash Lite Preview | API | 0.899 | 0.917 | 0.207 | 13.7s |
 | 5 | Claude 4.6 Opus | API | 0.897 | 0.896 | 0.225 | 74.9s |
 | 6 | Claude 4.7 Opus | API | 0.858 | 0.883 | 0.276 | 9.5s |
-| 7 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
-| 8 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
-| 9 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
+| 7 | YomiToku v0.13.0 | Modal | 0.842 | 0.807 | 0.384 | 20.5s |
+| 8 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
+| 9 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
 | 10 | GPT-5.5 | API | 0.755 | 0.830 | 0.301 | 98.1s |
 | 11 | GLM-OCR | Modal | 0.738 | 0.792 | 0.387 | 29.7s |
 | 12 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
@@ -69,9 +69,9 @@ API ベースの商用モデルから OSS の GPU モデルまで 26 以上の O
 | 19 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
 | 20 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
 | 21 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
-| 22 | Nemotron-OCR-v2 | Modal | 0.413 | 0.562 | 0.705 | 13.0s |
-| 23 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
-| 24 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
+| 22 | NDLOCR-Lite v1.2.1 | Modal | 0.443 | 0.511 | 0.728 | 18.9s |
+| 23 | Nemotron-OCR-v2 | Modal | 0.413 | 0.562 | 0.705 | 13.0s |
+| 24 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
 | 25 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
 | 26 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
 
