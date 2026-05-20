@@ -15,9 +15,13 @@ class GPTOCR(OCRModel):
     weights_url = None
     license = None
 
-    def __init__(self, model_id: str = "gpt-5.4", reasoning_effort: str = "high"):
+    def __init__(self, model_id: str = "gpt-5.4", reasoning_effort: str = "high", name: str | None = None):
         self.model_id = model_id
         self.reasoning_effort = reasoning_effort
+        if name is not None:
+            self.name = name
+        elif model_id != "gpt-5.4":
+            self.name = f"{model_id}-thinking" if reasoning_effort else model_id
 
     def is_available(self) -> bool:
         return bool(os.environ.get("OPENAI_API_KEY"))
