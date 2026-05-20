@@ -42,6 +42,7 @@ def get_all_models() -> list[OCRModel]:
         GeminiOCR(),
         GeminiOCR(model_id="gemini-3-flash-preview"),
         GeminiOCR(model_id="gemini-3.1-flash-lite-preview"),
+        GeminiOCR(model_id="gemini-3.5-flash"),
         GPTOCR(),
         GoogleCloudVisionOCR(),
         AzureVisionOCR(),
