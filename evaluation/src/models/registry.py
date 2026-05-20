@@ -31,6 +31,7 @@ def get_all_models() -> list[OCRModel]:
     """Return all registered OCR models."""
     return [
         # --- API models (direct calls) ---
+        ClaudeOCR(model_id="claude-opus-4-7", name="claude-4.7-opus"),
         ClaudeOCR(),
         ClaudeOCR(
             model_id="claude-sonnet-4-5-20250929",

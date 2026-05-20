@@ -2,7 +2,7 @@
 
 日本語手書き OCR モデルの比較評価フレームワーク。
 
-API ベースの商用モデルから OSS の GPU モデルまで 25 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
+API ベースの商用モデルから OSS の GPU モデルまで 26 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
 
 ## 対応モデル
 
@@ -10,6 +10,7 @@ API ベースの商用モデルから OSS の GPU モデルまで 25 以上の O
 
 | モデル | name | 備考 |
 |--------|------|------|
+| Claude 4.7 Opus | `claude-4.7-opus` | Adaptive thinking |
 | Claude 4.6 Opus | `claude-4.6-opus` | Adaptive thinking |
 | Claude 4.5 Sonnet | `claude-4.5-sonnet` | Extended thinking |
 | Gemini 3.1 Pro Preview | `gemini-3.1-pro-preview` | Deep thinking |
@@ -52,26 +53,27 @@ API ベースの商用モデルから OSS の GPU モデルまで 25 以上の O
 | 3 | Gemini 3 Flash Preview | API | 0.918 | 0.910 | 0.221 | 18.7s |
 | 4 | Gemini 3.1 Flash Lite Preview | API | 0.899 | 0.917 | 0.207 | 13.7s |
 | 5 | Claude 4.6 Opus | API | 0.897 | 0.896 | 0.225 | 74.9s |
-| 6 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
-| 7 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
-| 8 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
-| 9 | GPT-5.5 | API | 0.755 | 0.830 | 0.301 | 98.1s |
-| 10 | GLM-OCR | Modal | 0.738 | 0.792 | 0.387 | 29.7s |
-| 11 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
-| 12 | olmOCR-2 | Modal | 0.723 | 0.786 | 0.370 | 45.4s |
-| 13 | Sarashina2.2-OCR | Modal | 0.717 | 0.727 | 0.450 | 24.7s |
-| 14 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
-| 15 | Qwen VL OCR | API | 0.706 | 0.713 | 0.491 | 17.7s |
-| 16 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
-| 17 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
-| 18 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
-| 19 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
-| 20 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
-| 21 | Nemotron-OCR-v2 | Modal | 0.413 | 0.562 | 0.705 | 13.0s |
-| 22 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
-| 23 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
-| 24 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
-| 25 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
+| 6 | Claude 4.7 Opus | API | 0.858 | 0.883 | 0.276 | 9.5s |
+| 7 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
+| 8 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
+| 9 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
+| 10 | GPT-5.5 | API | 0.755 | 0.830 | 0.301 | 98.1s |
+| 11 | GLM-OCR | Modal | 0.738 | 0.792 | 0.387 | 29.7s |
+| 12 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
+| 13 | olmOCR-2 | Modal | 0.723 | 0.786 | 0.370 | 45.4s |
+| 14 | Sarashina2.2-OCR | Modal | 0.717 | 0.727 | 0.450 | 24.7s |
+| 15 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
+| 16 | Qwen VL OCR | API | 0.706 | 0.713 | 0.491 | 17.7s |
+| 17 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
+| 18 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
+| 19 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
+| 20 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
+| 21 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
+| 22 | Nemotron-OCR-v2 | Modal | 0.413 | 0.562 | 0.705 | 13.0s |
+| 23 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
+| 24 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
+| 25 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
+| 26 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
 
 ## 評価指標
 
