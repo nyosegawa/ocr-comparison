@@ -2,7 +2,7 @@
 
 日本語手書き OCR モデルの比較評価フレームワーク。
 
-API ベースの商用モデルから OSS の GPU モデルまで 21 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
+API ベースの商用モデルから OSS の GPU モデルまで 24 以上の OCR モデルを、3 つの評価指標で統一的に比較できます。アノテーションツール・評価ランナー・結果ビューアの 3 コンポーネントで構成されています。
 
 ## 対応モデル
 
@@ -15,6 +15,7 @@ API ベースの商用モデルから OSS の GPU モデルまで 21 以上の O
 | Gemini 3.1 Pro Preview | `gemini-3.1-pro-preview` | Deep thinking |
 | Gemini 3 Flash Preview | `gemini-3-flash-preview` | |
 | Gemini 3.1 Flash Lite Preview | `gemini-3.1-flash-lite-preview` | |
+| Gemini 3.5 Flash | `gemini-3.5-flash` | |
 | GPT-5.4 | `gpt-5.4` | Reasoning effort: high |
 | Google Cloud Vision | `google-cloud-vision` | |
 | Azure AI Vision | `azure-vision` | |
@@ -36,6 +37,8 @@ API ベースの商用モデルから OSS の GPU モデルまで 21 以上の O
 | [NDLOCR-Lite](https://github.com/ndl-lab/ndlocr-lite) | `ndlocr-lite` | CPU | CC-BY-4.0 |
 | [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) | `glm-ocr` | T4 | MIT |
 | [NDLOCR v2](https://github.com/ndl-lab/ndlocr_cli) | `ndlocr-v2` | A10G | CC-BY-4.0 |
+| [Sarashina2.2-OCR](https://huggingface.co/sbintuitions/sarashina2.2-ocr) | `sarashina-2.2-ocr` | L4 | MIT |
+| [Nemotron-OCR-v2](https://huggingface.co/nvidia/nemotron-ocr-v2) | `nemotron-ocr-v2` | L4 | NVIDIA Open Model License |
 
 ## 評価結果（日本語手書きメモ 6 枚）
 
@@ -43,27 +46,30 @@ API ベースの商用モデルから OSS の GPU モデルまで 21 以上の O
 
 | Rank | モデル | カテゴリ | NLS | BoC-F1 | CER | Avg Time |
 |------|--------|----------|-----|--------|-----|----------|
-| 1 | Gemini 3.1 Pro Preview | API | 0.924 | 0.929 | 0.205 | 67.9s |
-| 2 | Gemini 3 Flash Preview | API | 0.918 | 0.910 | 0.221 | 18.7s |
-| 3 | Gemini 3.1 Flash Lite Preview | API | 0.899 | 0.917 | 0.207 | 13.7s |
-| 4 | Claude 4.6 Opus | API | 0.897 | 0.896 | 0.225 | 74.9s |
-| 5 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
-| 6 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
-| 7 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
-| 8 | GLM-OCR | Modal | 0.738 | 0.792 | 0.387 | 29.7s |
-| 9 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
-| 10 | olmOCR-2 | Modal | 0.723 | 0.786 | 0.370 | 45.4s |
-| 11 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
-| 12 | Qwen VL OCR | API | 0.706 | 0.713 | 0.491 | 17.7s |
-| 13 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
-| 14 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
-| 15 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
-| 16 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
-| 17 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
-| 18 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
-| 19 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
-| 20 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
-| 21 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
+| 1 | Gemini 3.5 Flash | API | 0.927 | 0.928 | 0.192 | 14.8s |
+| 2 | Gemini 3.1 Pro Preview | API | 0.924 | 0.929 | 0.205 | 67.9s |
+| 3 | Gemini 3 Flash Preview | API | 0.918 | 0.910 | 0.221 | 18.7s |
+| 4 | Gemini 3.1 Flash Lite Preview | API | 0.899 | 0.917 | 0.207 | 13.7s |
+| 5 | Claude 4.6 Opus | API | 0.897 | 0.896 | 0.225 | 74.9s |
+| 6 | Azure AI Vision | API | 0.830 | 0.845 | 0.332 | 4.2s |
+| 7 | Google Cloud Vision | API | 0.820 | 0.783 | 0.509 | 2.2s |
+| 8 | YomiToku | Modal | 0.770 | 0.768 | 0.400 | 12.0s |
+| 9 | GLM-OCR | Modal | 0.738 | 0.792 | 0.387 | 29.7s |
+| 10 | Chandra | Modal | 0.734 | 0.780 | 0.361 | 29.2s |
+| 11 | olmOCR-2 | Modal | 0.723 | 0.786 | 0.370 | 45.4s |
+| 12 | Sarashina2.2-OCR | Modal | 0.717 | 0.727 | 0.450 | 24.7s |
+| 13 | GPT-5.4 | API | 0.714 | 0.814 | 0.331 | 123.4s |
+| 14 | Qwen VL OCR | API | 0.706 | 0.713 | 0.491 | 17.7s |
+| 15 | HunyuanOCR | Modal | 0.698 | 0.754 | 0.367 | 30.3s |
+| 16 | Claude 4.5 Sonnet | API | 0.640 | 0.709 | 0.465 | 16.4s |
+| 17 | Mistral OCR | API | 0.589 | 0.645 | 0.563 | 7.3s |
+| 18 | Nanonets-OCR-s | Modal | 0.557 | 0.597 | 0.615 | 69.1s |
+| 19 | DeepSeek-OCR | Modal | 0.446 | 0.530 | 0.671 | 35.4s |
+| 20 | Nemotron-OCR-v2 | Modal | 0.413 | 0.562 | 0.705 | 13.0s |
+| 21 | PaddleOCR | Modal | 0.353 | 0.394 | 0.784 | 12.8s |
+| 22 | NDLOCR-Lite | Modal | 0.271 | 0.394 | 0.915 | 10.5s |
+| 23 | GOT-OCR 2.0 | Modal | 0.194 | 0.250 | 0.888 | 10.2s |
+| 24 | NDLOCR v2 | Modal | 0.064 | 0.087 | 0.958 | 28.7s |
 
 ## 評価指標
 
